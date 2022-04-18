@@ -1,0 +1,1865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nproj>
+<nproj version="2.31" category="simple">
+    <preset>
+        <pattern>PDS3</pattern>
+        <sound set="true" filter="*.mp3"/>
+        <video set="true" filter="*.avi"/>
+        <image set="true" filter="*.png,*.jpg,*.bmp"/>
+        <res_count>4</res_count>
+        <default_res_lang>Korean</default_res_lang>
+        <export_script>pds</export_script>
+        <ncp>true</ncp>
+        <relation_link>true</relation_link>
+        <dummy>true</dummy>
+        <manual_action>false</manual_action>
+        <symbol_setting align="4" bgcolor="#00ff00" bgalpha="70" textcolor="#000000" textsize="9" texton="1"/>
+        <margin left="8.292" top="8.292" right="8.292" bottom="8.292"/>
+    </preset>
+    <book>
+        <title>D_NOTEBOOK_YEL</title>
+        <author></author>
+        <section>3</section>
+        <owner>27</owner>
+        <code>308</code>
+        <revision>6</revision>
+        <scale>0.001</scale>
+        <start_page side="">1</start_page>
+        <dot_is_line_segment>false</dot_is_line_segment>
+        <line_segment_length>1</line_segment_length>
+        <target_dpi>600</target_dpi>
+        <dotsize>1</dotsize>
+        <segment_info sub_code="" total_size="72" size="72" current_sequence="0" ncode_start_page="1" ncode_end_page="72"/>
+        <extra_info>pdf_page_count=72</extra_info>
+        <kind>0</kind>
+    </book>
+    <ticket>
+        <path></path>
+    </ticket>
+    <pdf>
+        <path>note_308.pdf</path>
+    </pdf>
+    <config>
+        <resource_mapping_mode>NORMAL</resource_mapping_mode>
+    </config>
+    <pages count="72">
+        <!--crop_margin="left, right, top, bottom"-->
+        <page_item number="0" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="1" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="2" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="3" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="4" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="5" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="6" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="7" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="8" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="9" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="10" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="11" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="12" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="13" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="14" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="15" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="16" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="17" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="18" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="19" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="20" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="21" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="22" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="23" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="24" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="25" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="26" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="27" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="28" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="29" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="30" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="31" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="32" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="33" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="34" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="35" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="36" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="37" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="38" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="39" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="40" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="41" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="42" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="43" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="44" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="45" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="46" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="47" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="48" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="49" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="50" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="51" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="52" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="53" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="54" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="55" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="56" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="57" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="58" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="59" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="60" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="61" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="62" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="63" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="64" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="65" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="66" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="67" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="68" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="69" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="70" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+        <page_item number="71" rotate_angle="0" x1="0" y1="0" x2="579.921" y2="775.512" crop_margin="23.5039,23.504,23.504,23.504" bg_disabled="false" page_type="0"/>
+    </pages>
+    <action_table>
+        <action>ChangeLanguage_Chinese</action>
+        <action>ChangeLanguage_English</action>
+        <action>ChangeLanguage_Japanese</action>
+        <action>Toggle_Language</action>
+        <action>Custom</action>
+        <action>DebugEnd</action>
+        <action>DebugStart</action>
+        <action>Play</action>
+        <action>RecordEnd</action>
+        <action>RecordPlay</action>
+        <action>RecordStart</action>
+        <action>StartRecord &gt;&gt;TmpFile</action>
+        <action>PlayEx</action>
+        <action>Stop</action>
+        <action>VolumeDown</action>
+        <action>VolumeUp</action>
+        <action>ContinuePlay</action>
+        <action>Icon</action>
+        <action>Action1</action>
+        <action>Action2</action>
+        <action>Action3</action>
+        <action>Action4</action>
+        <action>Action5</action>
+        <action>Action6</action>
+        <action>Action7</action>
+        <action>Action8</action>
+        <action>Action9</action>
+        <action>Action10</action>
+        <action>Answer1</action>
+        <action>Answer2</action>
+        <action>Question</action>
+        <action>Q&amp;A</action>
+        <action>UserAnswer</action>
+        <action>CustomDraw</action>
+        <action>NcodeBarcode</action>
+        <action>NcodeLabel</action>
+    </action_table>
+    <symbols>
+        <symbol page="1" page_name="002" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{33888845-c109-43ea-bd04-26b5cd81bba7}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="1" page_name="002" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{adc53084-59e0-4bc7-90e8-38fbcaf2fb49}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="2" page_name="003" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{63387d51-9596-4479-8b15-c83e47fa2a0d}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="2" page_name="003" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{d2a95472-321f-491f-9ae0-de9a94af4e75}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="3" page_name="004" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{9a9f4e96-eab9-4cfc-bc85-b5151e66b811}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="3" page_name="004" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{573dec97-9531-4b25-848d-5b955086eb41}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="4" page_name="005" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{b90c571a-158b-4eb1-9600-dfc6bfbf0bbc}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="4" page_name="005" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{8279032e-399a-44e9-af4e-2b0aa7679a62}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="5" page_name="006" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{3cb6286a-8e2d-44cb-a35a-f6a5159af694}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="5" page_name="006" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{cc3370bc-0c73-4413-9cd5-ad2cff74e46b}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="6" page_name="007" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{9deffd79-3eba-413a-8f5c-0e4f7dc7c02f}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="6" page_name="007" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{31361bd1-06b0-43a3-99eb-782c32c69629}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="7" page_name="008" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{3ed5bd2e-026f-4d35-a25f-f2c89607e578}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="7" page_name="008" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{ff570919-1113-4927-97c9-9b9113edfd6a}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="8" page_name="009" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{6b7a2c40-eb6d-44f9-85d7-4718174daf76}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="8" page_name="009" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{f8955a7f-4ff7-4aac-9162-cef744fcabef}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="9" page_name="010" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{bc38855b-2b40-4db2-9833-3417273e7336}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="9" page_name="010" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{d771ba2c-d612-4dff-80e8-e31d39f8944f}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="10" page_name="011" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{d022ba12-e1f7-4f3d-a8f4-35820f4bdd7b}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="10" page_name="011" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{f59ff6e6-a0e1-4a0c-a932-d920e4582dc0}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="11" page_name="012" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{66aa6158-9aec-4ca7-b44f-8db914a9438e}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="11" page_name="012" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{ac5d9f50-10ee-449e-a09a-2ce0899a9d4d}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="12" page_name="013" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{3e7a4910-7ded-434a-b7f4-3c49bbd111ba}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="12" page_name="013" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{d563d4dd-bd3b-4d4d-b707-6ff2cd2ccf6d}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="13" page_name="014" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{5fa8ed8a-6460-4726-8dcc-ff17d4aceb0c}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="13" page_name="014" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{41090e83-91fe-4232-883f-d1cf5eb56c92}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="14" page_name="015" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{83147878-ab95-471f-a7b9-0aec1678a200}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="14" page_name="015" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{961c842c-7307-42af-996e-4059252cd40b}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="15" page_name="016" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{a9ccf027-c311-4ac5-8fc7-7b40cd23dfad}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="15" page_name="016" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{8609d272-b4c8-4895-930f-a75f53c2fee7}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="16" page_name="017" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{c4e55e77-7160-4989-9515-892cb8f72a68}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="16" page_name="017" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{267febd5-845d-4181-9fdb-90d508cbe2b1}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="17" page_name="018" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{57bd08ed-4026-4b50-8717-a9203a6c6ba6}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="17" page_name="018" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{552290d6-b4ad-4356-a853-e2b1aade77f9}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="18" page_name="019" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{06c39c2a-0035-40c8-af70-6efd9a925340}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="18" page_name="019" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{de1c2839-1202-4bf0-8ba8-0ede13e442ae}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="19" page_name="020" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{cda094d4-e9ba-4404-a096-a6c277b61c9e}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="19" page_name="020" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{c0000560-1cde-42d8-a256-74cfe2c87a62}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="20" page_name="021" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{6369b1f9-d916-4bdd-99c4-431a64c88d69}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="20" page_name="021" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{c624f68b-75d8-4b41-be35-37dc8d1cfcc6}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="21" page_name="022" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{416610be-8783-418c-9f45-5cf43fc7115b}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="21" page_name="022" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{47ad02d5-0c42-4d16-b487-05b765ea7e17}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="22" page_name="023" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{07b04147-45ef-473e-ada4-75a69a8b5b77}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="22" page_name="023" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{e47039c0-109e-4c09-93ab-26c5213eb771}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="23" page_name="024" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{8b7920fb-9334-4841-ade4-7b21bec889a1}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="23" page_name="024" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{deb4ed28-ba25-4118-8cd4-79eb48e24f9b}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="24" page_name="025" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{f4a48f17-246a-4646-8d93-e02e4563997f}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="24" page_name="025" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{907a52fc-a7cd-4d79-9157-567bfa22b358}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="25" page_name="026" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{9b19702a-a82f-4c0f-9770-ba5b1f99aeda}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="25" page_name="026" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{e928ab93-7f23-4d5d-a2ea-91ea30acdf5c}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="26" page_name="027" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{da49a9c6-042e-4de8-ade6-b75bb8618434}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="26" page_name="027" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{25f27c23-2a10-43aa-9e7b-c401c672c024}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="27" page_name="028" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{7b51d6a4-5717-46d3-bc2e-e0d32189bc5b}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="27" page_name="028" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{b49b8e8a-5c34-4471-96b5-49d97567011f}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="28" page_name="029" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{c08591a0-dd0e-4ba7-8dda-e89ff361813e}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="28" page_name="029" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{38b0153e-9207-4bbb-8596-dff5be90b5d2}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="29" page_name="030" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{ce6df4b7-d346-46d8-93ce-ade432455b88}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="29" page_name="030" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{ca3932b9-513b-490b-a14e-34303f061081}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="30" page_name="031" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{046537d2-9223-443a-8251-7d67bc557700}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="30" page_name="031" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{14cd450d-edb0-4736-afb8-4f82c0066550}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="31" page_name="032" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{1e570201-58f4-49f6-a455-c8f830573ad3}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="31" page_name="032" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{47e8ad9c-882b-4709-95bb-bc9b017e7aa7}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="32" page_name="033" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{f9c32a02-86d7-4cfe-a1e0-178edce2af36}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="32" page_name="033" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{0320a4ae-442b-4813-b4cd-075c9e0af17d}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="33" page_name="034" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{4b1974d7-779c-4a24-8a4c-95b1e20dfa6d}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="33" page_name="034" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{55417b98-20e6-4d06-9ea1-a4125b049d0b}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="34" page_name="035" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{b456a43a-6774-457b-b5f7-5fdc17e5f8d2}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="34" page_name="035" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{03ca5bac-c3d0-41cb-95a0-a9aa323bb71d}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="35" page_name="036" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{ebf94518-d3a3-44f6-beaf-82e49d1f35d9}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="35" page_name="036" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{f2ce39cb-b739-4ad8-a2b1-d5216df3f88f}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="36" page_name="037" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{fddba861-564c-4955-a641-9b28ff85a181}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="36" page_name="037" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{8c48877f-259d-4550-ac7e-49b70f6eb19c}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="37" page_name="038" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{b81fab59-5e69-4036-9553-209e99a26f85}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="37" page_name="038" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{a563c393-422a-4fba-97d7-097a926029d5}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="38" page_name="039" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{59f2288d-6e9f-464c-93ef-8848990c2911}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="38" page_name="039" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{ef68cd14-ac6e-4c4a-b0a8-20d443e4d5df}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="39" page_name="040" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{2da687de-16d5-4977-b1f3-fa12c793281a}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="39" page_name="040" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{3541f19e-32fb-4925-badf-27805e474d7d}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="40" page_name="041" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{7c07594c-dc39-4df2-ab66-b3a1fd1e9b37}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="40" page_name="041" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{08817abe-5cb8-450a-a2ae-3f41aa741ae4}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="41" page_name="042" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{b7f470bf-722e-49fd-8834-a010ab64518e}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="41" page_name="042" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{f5cbd5d5-7468-4ea2-adbe-7d76b49d714d}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="42" page_name="043" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{53211576-c913-4ed1-a29b-2363565a5d27}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="42" page_name="043" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{ffb36963-4a74-418a-9f72-b8c5d7318535}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="43" page_name="044" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{884f9654-9150-48c2-b5f7-035af2cfb04a}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="43" page_name="044" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{2101bb14-a0aa-4dca-819c-89d57ca49216}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="44" page_name="045" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{a8de7110-c686-41ab-9abd-474702f229ab}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="44" page_name="045" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{505e5c70-b07f-458b-8621-374df1ae73ad}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="45" page_name="046" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{397bf4a7-ca5e-481c-a7ca-6f34ddf87648}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="45" page_name="046" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{5072b60b-72d3-4e94-ac2c-09eca52dddb6}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="46" page_name="047" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{43635c2d-b63e-4dff-b8f9-8848a7028f9e}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="46" page_name="047" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{249e104b-b077-4b3a-b900-39815adea378}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="47" page_name="048" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{9da315e4-9e27-4886-860b-cb2d9d390ca8}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="47" page_name="048" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{9cad011c-b0a7-4ce4-a5af-28d08be11982}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="48" page_name="049" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{e3ea8f59-451e-473a-94e9-5609e98fc7a2}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="48" page_name="049" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{d050a27a-5c83-4a3c-9a3d-251503f3031e}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="49" page_name="050" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{a452dc66-b457-457c-931b-d65a1130a2e2}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="49" page_name="050" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{ff96db69-f20f-4e95-a032-ec36b6dcf2d3}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="50" page_name="051" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{cf14ba39-cbb2-4142-8101-2a7b422fc358}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="50" page_name="051" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{11b9b5a0-b81b-474e-8845-24cbde518909}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="51" page_name="052" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{06b9eb11-c2d9-4c46-b297-118f46e18e75}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="51" page_name="052" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{39c1d958-83d1-42da-a08b-e1fdf131d0e4}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="52" page_name="053" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{741e863a-c97c-4ebe-9f4a-5b8b22370f9d}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="52" page_name="053" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{5db34a66-3d77-4e05-b64d-99049d0c447e}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="53" page_name="054" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{6b62aa3e-ae5c-4579-a5e4-1bb8c5fbde33}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="53" page_name="054" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{1d04781b-00f4-487a-956b-6d2ca0e5fe38}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="54" page_name="055" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{cd97b755-87fc-48d9-b972-7d7d89940660}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="54" page_name="055" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{406213c4-dc25-4bcc-bcee-4bf36c2ea695}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="55" page_name="056" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{83359991-7f3d-46eb-81d4-92a7980df378}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="55" page_name="056" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{4d40656a-3f91-47ea-aff2-d2f0eecbc17e}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="56" page_name="057" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{f7d36d6b-9b86-46f6-b545-e8936ec12459}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="56" page_name="057" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{574c33da-2c2d-4f96-a7d4-5de34de4f84f}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="57" page_name="058" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{c42ba35c-bc03-4b8a-9e86-521da4340951}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="57" page_name="058" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{30417ae6-64ac-4d38-a808-6aa1ba2edf97}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="58" page_name="059" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{a4bf31ab-334e-468f-af1c-6acd059a0a4e}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="58" page_name="059" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{cafe3b75-e86c-41a4-89bf-fe673be6ed91}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="59" page_name="060" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{dbc44dc7-3574-486f-9029-59e13c7d5f06}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="59" page_name="060" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{e69fddac-6909-478b-b290-c43fe70cd0da}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="60" page_name="061" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{e7a7f9cc-ddac-423c-846c-04980ae9df47}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="60" page_name="061" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{a98227df-8122-40b8-9d10-691a9e75989c}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="61" page_name="062" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{e5406e6e-f361-4b18-84bf-5d185380f717}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="61" page_name="062" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{4ecf7ee5-e40e-447f-88ed-bc630e03dd38}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="62" page_name="063" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{5924d908-1fdd-4b49-85ec-8fbed88b96e9}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="62" page_name="063" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{4a8bdbe0-da8c-4fb4-a6c8-6b5c1a1beca2}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="63" page_name="064" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{c97ebb60-5e55-4e86-9e7d-de2fa43a74e5}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="63" page_name="064" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{263ac45f-5a70-4a82-b806-cd13caa7a11e}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="64" page_name="065" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{aad23c1b-64b2-40ea-9a05-7010a37bd215}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="64" page_name="065" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{51e9d0e5-0d62-484a-8ac6-e14eae8a981f}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="65" page_name="066" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{925e5d13-c86f-4d11-985d-b3a9cf63a37f}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="65" page_name="066" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{a3eba64a-9f5c-44cd-bba9-549b127430bf}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="66" page_name="067" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{bddfd9bd-cb5e-4875-a502-e40b580beb4b}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="66" page_name="067" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{54d3fd78-ade8-4829-8136-24ecf3654759}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="67" page_name="068" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{eeac88a2-c481-4afa-9331-b393613392d5}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="67" page_name="068" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{ff88940d-504a-4c6b-8fc9-c3d37aed3ba4}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="68" page_name="069" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{fe2bd28d-9cce-46a0-98ca-fff9ea419c92}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="68" page_name="069" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{6d46812d-8d53-4ea7-bc42-c20ed37ff401}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="69" page_name="070" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{e810e691-482d-479d-a0c9-ccbcd3e23338}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="69" page_name="070" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{98e1054b-b7df-448e-b334-16c5b37ebf72}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="70" page_name="071" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{03a2dac1-5656-4ca2-896e-d719f4aec459}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="70" page_name="071" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{14c88ab0-b081-41c9-9648-19e383109a23}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="71" page_name="072" type="Rectangle" x="473.09" y="41.956" width="17.3611" height="18.3256" lock="1">
+            <name></name>
+            <id>{83b96f49-7834-4067-8ef5-3e2b08cdf5dd}</id>
+            <command name="" action="None" param="kakao"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+        <symbol page="71" page_name="072" type="Rectangle" x="503.919" y="44.8495" width="16.8789" height="13.5031" lock="1">
+            <name></name>
+            <id>{61b274ff-a30b-4fe7-8d63-9adf491a4a5f}</id>
+            <command name="" action="None" param="email"/>
+            <language_resources>
+                <language resource_country="korean" resource_type="" resource_id=""/>
+                <language resource_country="english" resource_type="" resource_id=""/>
+                <language resource_country="chinese" resource_type="" resource_id=""/>
+                <language resource_country="japanese" resource_type="" resource_id=""/>
+            </language_resources>
+            <matching_symbols previous="" next=""/>
+        </symbol>
+    </symbols>
+    <resources/>
+</nproj>
