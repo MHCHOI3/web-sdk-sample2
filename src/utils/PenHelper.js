@@ -154,6 +154,7 @@ class PenHelper {
       controller.putData(a)
     });
     controller.OnConnected()
+    
     // Write Set
     controller.addWrite( (data) => {
       write
@@ -163,6 +164,8 @@ class PenHelper {
       })
       .catch((err) => console.log("write Error", err));
     })
+    controller.SetHoverEnable(true);
+
     // Call back Event Set
     controller.addCallback(this.handleDot, this.handleMessage);
     // device Status Set
