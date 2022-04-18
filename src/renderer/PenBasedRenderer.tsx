@@ -9,7 +9,8 @@ const useStyle = makeStyles(() => ({
   mainBackground: {
     display: 'flex',
     flexDirection: 'column',
-    textAlign: 'center'
+    textAlign: 'center',
+    alignItems: 'center',
   }
 }));
 
@@ -49,8 +50,7 @@ const PenBasedRenderer = () => {
       const { width, height } = api.getNoteSize(pageInfo);
       setNoteImage(imageSrc);
       setNoteWidth(width);
-      setNoteHeight(height);
-      
+      setNoteHeight(height); 
     }
   }, [pageInfo]);
 
@@ -61,10 +61,10 @@ const PenBasedRenderer = () => {
        * CanvasFb.height : CanvasFb.width = noteHeight : noteWidth;
        * CanvasFb.width = (CanvasFb.height * noteWidth) / noteHeight;
        */
-      // Canvas width 재설
       const refactorCanvasWidth = canvasFb.height * noteWidth / noteHeight;
       canvasFb.setWidth(refactorCanvasWidth);
 
+      // CanvasFb noteImage에 맞춘 scaling 작업
       canvasFb.setBackgroundImage(noteImage, canvasFb.renderAll.bind(canvasFb), {
         scaleX: canvasFb.width / noteWidth,
         scaleY: canvasFb.height / noteHeight,
@@ -91,6 +91,10 @@ const PenBasedRenderer = () => {
   }
 
   const strokeProcess = (dot) => {
+    if (!pageInfo) {
+      setPageInfo(dot.pageInfo);
+    }
+
     /**
      * Calculate dot ratio // 
      * ncodeSize : ncodeDotPosition = canvasSize : canvasDotPosition
@@ -100,10 +104,6 @@ const PenBasedRenderer = () => {
      * 
      */
     // Calculate dot ratio
-    if (!pageInfo) {
-      setPageInfo(dot.pageInfo);
-    }
-
     const dx = (dot.x * canvasFb.width) / ncodeWidth;
     const dy = (dot.y * canvasFb.height) / ncodeHeight;
 
