@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import PenHelper from '../utils/PenHelper';
 import { fabric } from 'fabric';
 import api from '../server/NoteServer';
-import { PageInfo } from '../utils/type';
+import { PageInfo, PaperBase } from '../utils/type';
 
 const useStyle = makeStyles(() => ({
   mainBackground: {
@@ -28,6 +28,7 @@ const PenBasedRenderer = () => {
   const [ncodeWidth, setNcodeWidth] = useState(0);
   const [ncodeHeight, setNcodeHeight] = useState(0); 
 
+  const [paperBase, setPaperBase] = useState<PaperBase>({Xmin: 0, Ymin: 0});
   // canvas size
   useEffect(() => {
     setCanvasFb(initCanvas());
@@ -37,6 +38,11 @@ const PenBasedRenderer = () => {
     if (pageInfo) {
       // Ncode Info
       const ncodeSize = api.extractMarginInfo(pageInfo);
+      
+      if (ncodeSize !== undefined) {
+        setPaperBase({Xmin: ncodeSize.Xmin, Ymin: ncodeSize.Ymin})
+      }
+
       let ncodeWidth, ncodeHeight;
       if (ncodeSize) {
         ncodeWidth = ncodeSize.Xmax - ncodeSize.Xmin;
@@ -111,8 +117,8 @@ const PenBasedRenderer = () => {
      */
     // Calculate dot ratio
 
-    const dx = (dot.x * canvasFb.width) / ncodeWidth;
-    const dy = (dot.y * canvasFb.height) / ncodeHeight;
+    const dx = ((dot.x - paperBase.Xmin) * canvasFb.width) / ncodeWidth;
+    const dy = ((dot.y - paperBase.Ymin) * canvasFb.height) / ncodeHeight;
 
     // Pen Down
     try {
