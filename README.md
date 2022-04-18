@@ -39,6 +39,23 @@ useEffect(() => {
 
 ```
 
+### Step4: Hover mode setting
+```typescript
+// PenController.js
+PenController.prototype.SetHoverEnable = function (enable) {
+  var _this = this;
+  this.Request(function () { return _this.mClientV1.SetHoverEnable(enable); }, function () { return _this.mClientV2.ReqSetupHoverMode(enable); });
+};
+
+
+// PenHelper.js
+characteristicBinding = (read, write, device) => {    
+  ... // after write 
+  controller.SetHoverEnable(true);
+  ...
+}
+```
+
 ## Debug Settings
 ```typescript
 // webpack.config.js
