@@ -15,6 +15,12 @@ const useStyle = makeStyles(() => ({
   },
   hoverCanvasContainer: {
     position: 'absolute',
+  },
+  mainCanvas: {
+    position: 'absolute',
+  },
+  hoverCanvas: {
+    position: 'absolute',
   }
 }));
 
@@ -106,7 +112,7 @@ const PenBasedRenderer = () => {
 
   // Initialize Canvas
   const initCanvas = () => { 
-    const canvas = new fabric.Canvas('sampleCanvas');
+    const canvas = new fabric.Canvas('mainCanvas');
     const hoverCanvas = new fabric.Canvas('hoverCanvas');
 
     setCtx(canvas.getContext());
@@ -185,9 +191,9 @@ const PenBasedRenderer = () => {
 
   return (
     <div className={classes.mainBackground}>
-      <canvas id="sampleCanvas" width={window.innerWidth} height={window.innerHeight-81} style={{zIndex: 0, position: 'absolute'}}></canvas>
+      <canvas id="mainCanvas" className={classes.mainCanvas} width={window.innerWidth} height={window.innerHeight-81}></canvas>
       <div className={classes.hoverCanvasContainer}>
-        <canvas id="hoverCanvas" width={window.innerWidth} height={window.innerHeight-81} style={{zIndex: 1, position: 'absolute'}}></canvas>
+        <canvas id="hoverCanvas" className={classes.hoverCanvas} width={window.innerWidth} height={window.innerHeight-81}></canvas>
       </div>
       <div>
         <label>Width: </label>
