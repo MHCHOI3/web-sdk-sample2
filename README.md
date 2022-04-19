@@ -53,6 +53,17 @@ characteristicBinding = (read, write, device) => {
   ... // after write 
   controller.SetHoverEnable(true);
   ...
+};
+
+
+// PenClientParserV2.js - line 500
+* before
+if (this.penSettingInfo.HoverMode && !this.state.IsStartWithDown && this.state.IsStartWithPaperInfo) {
+  ...
+}
+* after
+if (this.penSettingInfo.HoverMode && !this.state.IsStartWithDown) {
+  ...
 }
 ```
 
