@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import PenHelper from '../utils/PenHelper';
 import { fabric } from 'fabric';
@@ -21,7 +21,14 @@ const useStyle = makeStyles(() => ({
   },
   hoverCanvas: {
     position: 'absolute',
-  }
+  },
+  inputContainer: {
+    position: 'absolute',
+  },
+  inputStyle: {
+    display: 'inline-block', 
+    margin: 20,
+  },
 }));
 
 const PenBasedRenderer = () => {
@@ -195,23 +202,15 @@ const PenBasedRenderer = () => {
       <div className={classes.hoverCanvasContainer}>
         <canvas id="hoverCanvas" className={classes.hoverCanvas} width={window.innerWidth} height={window.innerHeight-81}></canvas>
       </div>
-      <div>
-        <label>Width: </label>
-        <input
-          id="width-input"
-          type="number"
-          disabled={false}
-          onChange={(e) => setCanvasWidth(parseInt(e.target.value))}
-        />
-      </div>
-      <div>
-        <label>Height: </label>
-        <input
-          id="height-input"
-          type="number"
-          disabled={false}
-          onChange={(e) => setCanvasHeight(parseInt(e.target.value))}
-        />
+      <div className={classes.inputContainer}>
+        <div className={classes.inputStyle}>
+          <TextField id="width-input" label="Width" variant="outlined" type="number" size="small"
+              onChange={(e) => setCanvasWidth(parseInt(e.target.value))} />
+        </div>
+        <div className={classes.inputStyle}>
+          <TextField id="height-input" label="Height" variant="outlined" type="number" size="small"
+              onChange={(e) => setCanvasHeight(parseInt(e.target.value))} />
+        </div>
       </div>
     </div>
   );
