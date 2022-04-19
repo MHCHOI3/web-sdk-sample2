@@ -30,16 +30,20 @@ class PenHelper {
     this.mac = mac
     let dot = args;
     // console.log(args) // 기존에 args.Dot 이었는데  -> 수정
-    if (dot.DotType === 1) { // Down
+    /**
+     * Dot type 재정의
+     * 0(Down), 1(Move), 2(Up), 3(Hover)
+     */
+    if (dot.DotType === 0) { // Down
       if (this.d.section !== dot.section || this.d.owner !== dot.owner  || this.d.note !== dot.note || this.d.page !== dot.page ) {
         if (this.pageCallback) this.pageCallback(dot)
         this.d = dot
         this.dotCallback = null
       }
 
-    } else if (dot.DotType === 2) { // Move
+    } else if (dot.DotType === 1) { // Move
 
-    } else if (dot.DotType === 3) { // Up
+    } else if (dot.DotType === 2) { // Up
       
     }
     if (this.dotCallback) {
@@ -154,7 +158,7 @@ class PenHelper {
       controller.putData(a)
     });
     controller.OnConnected()
-    
+
     // Write Set
     controller.addWrite( (data) => {
       write
