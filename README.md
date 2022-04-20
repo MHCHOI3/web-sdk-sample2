@@ -35,8 +35,11 @@ useEffect(() => {
 
 ### Step3: Draw on Canvas with SmartPen
 ```typescript
-// Draw stroke using dot data
+// Coordinate Transformation with ncode_dot based on view_size
+const pdfDot = PenHelper.ncodeToPdf(dot, { width: canvasFb.width, height: canvasFb.height });
 
+// Create path data using pdfDot
+const path = new Path(pdfDot.x, pdfDot.y);
 ```
 
 ### Step4: Hover mode setting
