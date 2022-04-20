@@ -10,7 +10,20 @@ type PaperBase = {
   Ymin: number;
 }
 
+type Dot = {
+  angle: object;
+  color: number;
+  dotType: number;
+  f: number;
+  pageInfo: PageInfo;
+  penTipType: number;
+  timestamp: number;
+  x: number;
+  y: number;
+}
+
 export type { 
   PageInfo,
   PaperBase,
+  Dot
 };

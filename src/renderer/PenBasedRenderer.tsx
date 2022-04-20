@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import PenHelper from '../utils/PenHelper';
 import { fabric } from 'fabric';
 import api from '../server/NoteServer';
-import { PageInfo, PaperBase } from '../utils/type';
+import { Dot, PageInfo, PaperBase } from '../utils/type';
 
 const useStyle = makeStyles(() => ({
   mainBackground: {
@@ -33,6 +33,7 @@ const useStyle = makeStyles(() => ({
 
 const PenBasedRenderer = () => {
   const classes = useStyle();
+
   const [canvasFb, setCanvasFb] = useState<any>();
   const [hoverCanvasFb, setHoverCanvasFb] = useState<any>();
   const [ctx, setCtx] = useState<any>();
@@ -40,11 +41,11 @@ const PenBasedRenderer = () => {
   const [pageInfo, setPageInfo] = useState<PageInfo>();
   const [noteImage, setNoteImage] = useState<string>();
 
-  const [noteWidth, setNoteWidth] = useState(0);
-  const [noteHeight, setNoteHeight] = useState(0);
+  const [noteWidth, setNoteWidth] = useState<number>(0);
+  const [noteHeight, setNoteHeight] = useState<number>(0);
 
-  const [ncodeWidth, setNcodeWidth] = useState(0);
-  const [ncodeHeight, setNcodeHeight] = useState(0); 
+  const [ncodeWidth, setNcodeWidth] = useState<number>(0);
+  const [ncodeHeight, setNcodeHeight] = useState<number>(0); 
 
   const [paperBase, setPaperBase] = useState<PaperBase>({Xmin: 0, Ymin: 0});
 
@@ -105,7 +106,7 @@ const PenBasedRenderer = () => {
         scaleY: canvasFb.height / noteHeight,
      });
     }
-  }, [canvasFb, noteImage]);
+  }, [canvasFb, noteImage, noteWidth, noteHeight]);
 
   useEffect(() => {
     console.log(noteWidth, noteHeight);
@@ -127,7 +128,7 @@ const PenBasedRenderer = () => {
     return { canvas, hoverCanvas }
   }
 
-  const strokeProcess = (dot) => {
+  const strokeProcess = (dot: Dot) => {
     if (!pageInfo) {
       setPageInfo(dot.pageInfo);
     }
@@ -150,7 +151,8 @@ const PenBasedRenderer = () => {
         hoverPoint.set({ opacity: 0 });
         hoverCanvasFb.requestRenderAll();      
       } else if (dot.dotType === 1) { // Pen Move
-        if (dot.x > 1000 || dot.y > 1000) {
+        // dot이 너무 큰 값이 들어와버리면 이상 dot으로 취급하여 종료시켜줌
+        if (dot.x > 1000 || dot.y > 1000) { 
           return
         }
         ctx.lineWidth = 2;
@@ -169,15 +171,17 @@ const PenBasedRenderer = () => {
     }
   }
   
-  const setCanvasWidth = (width) => {
+  const setCanvasWidth = (width: number) => {
     canvasFb.setWidth(width);
+    hoverCanvasFb.setWidth(width);
   }
 
-  const setCanvasHeight = (height) => {
+  const setCanvasHeight = (height: number) => {
     canvasFb.setHeight(height);
+    hoverCanvasFb.setHeight(height);
   }
 
-  const hoverProcess = (dx, dy) => {
+  const hoverProcess = (dx: number, dy: number) => {
     hoverPoint.set({ left: dx, top: dy, opacity: 0.5 });
     hoverCanvasFb.requestRenderAll();
   }
