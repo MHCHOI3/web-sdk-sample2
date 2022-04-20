@@ -5,6 +5,13 @@ type PageInfo = {
   page: number;
 };
 
+type PageInfo2 = {
+  section: number;
+  owner: number;
+  note: number;
+  page: number;
+}
+
 type PaperBase = {
   Xmin: number;
   Ymin: number;
@@ -27,9 +34,21 @@ type PdfDot = {
   y: number;
 }
 
+type View = {
+  width: number;
+  height: number;
+}
+
+type Options = {
+  filters: any;
+}
+
 export type { 
   PageInfo,
+  PageInfo2,
   PaperBase,
   Dot,
   PdfDot,
+  View,
+  Options,
 };
