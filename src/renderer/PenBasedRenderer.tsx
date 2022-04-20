@@ -1,9 +1,9 @@
 import { makeStyles, TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import PenHelper from '../utils/PenHelper';
+import PenHelper from '../utils/PenHelper2';
 import { fabric } from 'fabric';
 import api from '../server/NoteServer';
-import { Dot, PageInfo, PaperBase, PdfDot } from '../utils/type';
+import { Dot, PageInfo, PdfDot } from '../utils/type';
 
 const useStyle = makeStyles(() => ({
   mainBackground: {
@@ -44,11 +44,6 @@ const PenBasedRenderer = () => {
   const [noteWidth, setNoteWidth] = useState<number>(0);
   const [noteHeight, setNoteHeight] = useState<number>(0);
 
-  const [ncodeWidth, setNcodeWidth] = useState<number>(0);
-  const [ncodeHeight, setNcodeHeight] = useState<number>(0); 
-
-  const [paperBase, setPaperBase] = useState<PaperBase>({Xmin: 0, Ymin: 0});
-
   const [hoverPoint, setHoverPoint] = useState<any>();
   
   // canvas size
@@ -60,20 +55,6 @@ const PenBasedRenderer = () => {
 
   useEffect(() => {
     if (pageInfo) {
-      // Ncode Info
-      const ncodeSize = api.extractMarginInfo(pageInfo);
-      if (ncodeSize !== undefined) {
-        setPaperBase({Xmin: ncodeSize.Xmin, Ymin: ncodeSize.Ymin})
-      }
-
-      let ncodeWidth, ncodeHeight;
-      if (ncodeSize) {
-        ncodeWidth = ncodeSize.Xmax - ncodeSize.Xmin;
-        ncodeHeight = ncodeSize.Ymax - ncodeSize.Ymin;
-      }
-      setNcodeWidth(ncodeWidth);
-      setNcodeHeight(ncodeHeight);
-
       // Note Info
       const imageSrc = api.getNoteImage(pageInfo);
       const { width, height } = api.getNoteSize(pageInfo);
@@ -110,7 +91,7 @@ const PenBasedRenderer = () => {
       canvasFb.setBackgroundImage(noteImage, canvasFb.renderAll.bind(canvasFb), {
         scaleX: canvasFb.width / noteWidth,
         scaleY: canvasFb.height / noteHeight,
-     });
+      });
     }
   }, [canvasFb, noteImage]);
  
@@ -135,14 +116,15 @@ const PenBasedRenderer = () => {
       setPageInfo(dot.pageInfo);
     }
 
-    // ncode dot을 뷰(Canvas)에 보여지게 하기위해 좌표값을 변환시켜 줌.
-    const pdfDot = ncodeToPdf(dot);
+    // 먼저, ncode_dot을 view(Canvas) size 에 맞춰 좌표값을 변환시켜준다.
+    const pdfDot = PenHelper.ncodeToPdf(dot, { width: canvasFb.width, height: canvasFb.height });
 
     try {
       if (dot.dotType === 0) { // Pen Down
         ctx.beginPath();
+        // PenDown 일때는 hoverPoint가 보일 필요가 없으므로 opacity 0으로 설정
         hoverPoint.set({ opacity: 0 });
-        hoverCanvasFb.requestRenderAll();      
+        hoverCanvasFb.requestRenderAll();
       } else if (dot.dotType === 1) { // Pen Move
         // dot 좌표가 너무 큰 값이 들어와버리면 이상 dot으로 취급하여 처리하지 않음.
         if (dot.x > 1000 || dot.y > 1000) { 
@@ -174,6 +156,7 @@ const PenBasedRenderer = () => {
     hoverCanvasFb.setHeight(height);
   }
 
+  // hoverPoint를 이동시키기 위한 로직
   const hoverProcess = (pdfDot: PdfDot) => {
     hoverPoint.set({ left: pdfDot.x, top: pdfDot.y, opacity: 0.5 });
     hoverCanvasFb.requestRenderAll();
@@ -191,23 +174,6 @@ const PenBasedRenderer = () => {
     
     setHoverPoint(hoverPoint);
     hoverCanvasFb.add(hoverPoint);
-  }
-
-  const ncodeToPdf = (dot: Dot) => {
-    /**
-     * paperBase: paper의 margin 값
-     * ncodeWidth: ncode의 가로길이 / ncodeHeight: ncode의 세로길이
-     * dot: ncode의 좌표값
-     * pdfDot: 뷰(Canvas) 사이즈에 맞춰 변환된 dot 좌표값
-     * 
-     * 뷰(Canvas)에 보여질수 있는 좌표값을 구하기 위해 ncode dot 좌표를 계산하는 로직
-     * ncode_size : ncode_dot_position = canvas_size : canvas_dot_position
-     * canvas_dot_position = (ncode_dot_position * canvas_size) / ncode_size
-     * 
-     */
-    const x = ((dot.x - paperBase.Xmin) * canvasFb.width) / ncodeWidth;
-    const y = ((dot.y - paperBase.Ymin) * canvasFb.height) / ncodeHeight;
-    return { x, y }
   }
 
   return (
