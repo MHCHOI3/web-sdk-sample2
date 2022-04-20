@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import PenHelper from '../utils/PenHelper';
 import { fabric } from 'fabric';
 import api from '../server/NoteServer';
-import { Dot, PageInfo, PaperBase } from '../utils/type';
+import { Dot, PageInfo, PaperBase, PdfDot } from '../utils/type';
 
 const useStyle = makeStyles(() => ({
   mainBackground: {
@@ -92,25 +92,27 @@ const PenBasedRenderer = () => {
   useEffect(() => {
     if (noteImage) {
       /**
-       * Canvas width 재설정
+       * Canvas width 를 note image 비율에 맞춰 재설정 하는 로직
+       * 추가, Canvas height 는 기본적으로 'window.innerHeight - 81(Header의 높이)'로 되어있음.
+       * 
+       * noteWidth: note의 가로길이
+       * noteHeight: note의 세로길이
+       * 
        * CanvasFb.height : CanvasFb.width = noteHeight : noteWidth;
-       * CanvasFb.width = (CanvasFb.height * noteWidth) / noteHeight;
+       * CanvasFb.width(=refactorCanvasWidth) = (CanvasFb.height * noteWidth) / noteHeight;
+       * 
        */
       const refactorCanvasWidth = canvasFb.height * noteWidth / noteHeight;
       canvasFb.setWidth(refactorCanvasWidth);
       hoverCanvasFb.setWidth(refactorCanvasWidth);
 
-      // CanvasFb noteImage에 맞춘 scaling 작업
+      // NoteImage를 canvas 크기에 맞춰 보여지게 하기위한 scaling 작업
       canvasFb.setBackgroundImage(noteImage, canvasFb.renderAll.bind(canvasFb), {
         scaleX: canvasFb.width / noteWidth,
         scaleY: canvasFb.height / noteHeight,
      });
     }
-  }, [canvasFb, noteImage, noteWidth, noteHeight]);
-
-  useEffect(() => {
-    console.log(noteWidth, noteHeight);
-  }, [noteWidth, noteHeight]);
+  }, [canvasFb, noteImage]);
  
   useEffect(() => {
     PenHelper.dotCallback = async (mac, dot) => {
@@ -133,17 +135,8 @@ const PenBasedRenderer = () => {
       setPageInfo(dot.pageInfo);
     }
 
-    /**
-     * Calculate dot ratio // 
-     * ncodeSize : ncodeDotPosition = canvasSize : canvasDotPosition
-     * canvasDotPosition = (ncodeDotPosition * canvasSize) / ncodeSize
-     * dot: ncodeDotPosition
-     * dx/dy: canvasDotPosition
-     * 
-     */
-    // Calculate dot ratio
-    const dx = ((dot.x - paperBase.Xmin) * canvasFb.width) / ncodeWidth;
-    const dy = ((dot.y - paperBase.Ymin) * canvasFb.height) / ncodeHeight;
+    // ncode dot을 뷰(Canvas)에 보여지게 하기위해 좌표값을 변환시켜 줌.
+    const pdfDot = ncodeToPdf(dot);
 
     try {
       if (dot.dotType === 0) { // Pen Down
@@ -151,20 +144,20 @@ const PenBasedRenderer = () => {
         hoverPoint.set({ opacity: 0 });
         hoverCanvasFb.requestRenderAll();      
       } else if (dot.dotType === 1) { // Pen Move
-        // dot이 너무 큰 값이 들어와버리면 이상 dot으로 취급하여 종료시켜줌
+        // dot 좌표가 너무 큰 값이 들어와버리면 이상 dot으로 취급하여 처리하지 않음.
         if (dot.x > 1000 || dot.y > 1000) { 
           return
         }
         ctx.lineWidth = 2;
-        ctx.lineTo(dx, dy);
+        ctx.lineTo(pdfDot.x, pdfDot.y);
         ctx.stroke();
         ctx.closePath();
         ctx.beginPath();
-        ctx.moveTo(dx, dy);
-      } else if (dot.dotType === 2) {  // Pen Up
+        ctx.moveTo(pdfDot.x, pdfDot.y);
+      } else if (dot.dotType === 2) { // Pen Up
         ctx.closePath();
-      } else if (dot.dotType === 3) {
-        hoverProcess(dx, dy);
+      } else if (dot.dotType === 3) { // Hover 
+        hoverProcess(pdfDot);
       }
     } catch {
       console.log('ctx : ' + ctx);
@@ -181,8 +174,8 @@ const PenBasedRenderer = () => {
     hoverCanvasFb.setHeight(height);
   }
 
-  const hoverProcess = (dx: number, dy: number) => {
-    hoverPoint.set({ left: dx, top: dy, opacity: 0.5 });
+  const hoverProcess = (pdfDot: PdfDot) => {
+    hoverPoint.set({ left: pdfDot.x, top: pdfDot.y, opacity: 0.5 });
     hoverCanvasFb.requestRenderAll();
   }
 
@@ -200,13 +193,30 @@ const PenBasedRenderer = () => {
     hoverCanvasFb.add(hoverPoint);
   }
 
+  const ncodeToPdf = (dot: Dot) => {
+    /**
+     * paperBase: paper의 margin 값
+     * ncodeWidth: ncode의 가로길이 / ncodeHeight: ncode의 세로길이
+     * dot: ncode의 좌표값
+     * pdfDot: 뷰(Canvas) 사이즈에 맞춰 변환된 dot 좌표값
+     * 
+     * 뷰(Canvas)에 보여질수 있는 좌표값을 구하기 위해 ncode dot 좌표를 계산하는 로직
+     * ncode_size : ncode_dot_position = canvas_size : canvas_dot_position
+     * canvas_dot_position = (ncode_dot_position * canvas_size) / ncode_size
+     * 
+     */
+    const x = ((dot.x - paperBase.Xmin) * canvasFb.width) / ncodeWidth;
+    const y = ((dot.y - paperBase.Ymin) * canvasFb.height) / ncodeHeight;
+    return { x, y }
+  }
+
   return (
     <div className={classes.mainBackground}>
       <canvas id="mainCanvas" className={classes.mainCanvas} width={window.innerWidth} height={window.innerHeight-81}></canvas>
       <div className={classes.hoverCanvasContainer}>
         <canvas id="hoverCanvas" className={classes.hoverCanvas} width={window.innerWidth} height={window.innerHeight-81}></canvas>
       </div>
-      <div className={classes.inputContainer}>
+      {/* <div className={classes.inputContainer}>
         <div className={classes.inputStyle}>
           <TextField id="width-input" label="Width" variant="outlined" type="number" size="small"
               onChange={(e) => setCanvasWidth(parseInt(e.target.value))} />
@@ -215,7 +225,7 @@ const PenBasedRenderer = () => {
           <TextField id="height-input" label="Height" variant="outlined" type="number" size="small"
               onChange={(e) => setCanvasHeight(parseInt(e.target.value))} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
