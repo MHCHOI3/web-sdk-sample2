@@ -22,8 +22,14 @@ type Dot = {
   y: number;
 }
 
+type PdfDot = {
+  x: number;
+  y: number;
+}
+
 export type { 
   PageInfo,
   PaperBase,
-  Dot
+  Dot,
+  PdfDot,
 };
