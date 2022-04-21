@@ -1,9 +1,8 @@
 import { PageInfo } from '../utils/type';
-import data from './note_308/note_308.nproj';
-import imageSrc from '../server/note_308/3_27_308_15.jpg';
-import plate2Data from './note_2/note_2.nproj';
-import plate2Image from './note_2/3_1013_2_2.jpg';
-// import plate16Image from './note_2/3_1013_2_16_2.jpg';
+import digitalNoteNproj from './note_3_27_308/note_308.nproj';
+import digitalNoteImage from '../note_3_27_308/3_27_308_15.jpg';
+import plateNproj from './note_3_1013_2/note_2.nproj';
+import plateImage from './note_3_1013_2/3_1013_2_2.jpg';
 
 // Ncode Formula
 const NCODE_SIZE_IN_INCH = 8 * 7 / 600;
@@ -23,7 +22,7 @@ xhttp.onreadystatechange = function() {
     fetchData(xhttp);
   }
 };
-xhttp.open('GET', data, true);
+xhttp.open('GET', plateNproj, true);
 xhttp.send();
 
 const fetchData = (xmlData) => {
@@ -86,7 +85,7 @@ const extractMarginInfo = (pageInfo: PageInfo) => {
 const getNoteImage = (pageInfo: PageInfo) => {
   // const { section, owner, book, page } = pageInfo;
   // const imgSrc = `../server/note_308/${section}_${owner}_${book}_${page}.jpg`
-  return imageSrc;
+  return plateImage;
 }
 
 const getNoteSize = (pageInfo: PageInfo) => {
@@ -98,9 +97,9 @@ const getNoteSize = (pageInfo: PageInfo) => {
     return { width: image.width, height: image.height};
   }
 
-  return { width: 1182, height: 1616 };  // Note 308 size
+  // return { width: 1182, height: 1616 };  // Note 308 size
   // return { width: 1072, height: 800 }; // 부기보드 image size
-  // return { width: 1280, height: 714 }; // plate2 image size
+  return { width: 1280, height: 714 }; // plate2 image size
 }
 
 const api = {
