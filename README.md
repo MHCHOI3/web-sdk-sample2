@@ -85,3 +85,13 @@ devtool: 'cheap-module-source-map',
 // Dev run
 $ npm run dev
 ```
+
+## Additional settings (to use PenHelper2.ts)
+```typescript
+// add 'device: any' in Class PenController
+export default class PenController {
+  ...
+  device: any;
+  ...
+}
+```
