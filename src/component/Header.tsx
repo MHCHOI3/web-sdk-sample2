@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <div className={classes.wrap}>
       <div className={classes.logoContainer}>
-        <img src={LogoTextImage} className={classes.imgStyle} />
+        <img src={LogoTextImage} className={classes.imgStyle} alt="logo" />
         <Typography className={classes.title}>WEB SDK SAMPLE</Typography>
       </div>
       <NavLayer />
