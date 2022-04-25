@@ -314,6 +314,7 @@ class PenHelper {
 
     let nx = Math.cos(Math.PI/180 * angle) * dot.x - Math.sin(Math.PI/180 * angle) * dot.y;
     let ny = Math.sin(Math.PI/180 * angle) * dot.x + Math.cos(Math.PI/180 * angle) * dot.y;
+    
     if (angle === 0) {
       paperBase.Xmin = 0;
       paperBase.Ymin = 0;
