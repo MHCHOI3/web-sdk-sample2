@@ -239,7 +239,13 @@ class PenHelper {
 
   ncodeToPdf = (dot: Dot, view: View) => {
     const pageInfo = dot.pageInfo;
-    const ncodeSize = api.extractMarginInfo(pageInfo);
+
+    let ncodeSize;
+    try {
+      ncodeSize = api.extractMarginInfo(pageInfo);  
+    } catch (e) {
+      console.log(e);
+    }
 
     /**
      * paperBase: ncode paper의 margin 값
@@ -248,20 +254,85 @@ class PenHelper {
      * 
      */
     let paperBase, ncodeWidth, ncodeHeight;
-    if (ncodeSize) {
-      paperBase = { Xmin: ncodeSize.Xmin, Ymin: ncodeSize.Ymin };
-      ncodeWidth = ncodeSize.Xmax - ncodeSize.Xmin;
-      ncodeHeight = ncodeSize.Ymax - ncodeSize.Ymin;
-    }
+    paperBase = { Xmin: ncodeSize.Xmin, Ymin: ncodeSize.Ymin };
+    ncodeWidth = ncodeSize.Xmax - ncodeSize.Xmin;
+    ncodeHeight = ncodeSize.Ymax - ncodeSize.Ymin;
 
     /**
      * view(Canvas)에 보여질수 있는 좌표값을 구하기 위해 ncode dot 좌표를 계산하는 로직
      * ncode_size : ncode_dot_position = view_size : view_dot_position
      * view_dot_position = (ncode_dot_position * view_size) / ncode_size
+     * 따라서, ncode_dot_position에 각각의 width, height ratio를 곱해주면 된다.
+     * 
+     * widthRatio = view.width / ncodeWidth
+     * heightRatio = view.height / ncodeHeight
      * 
      */
-    const x = ((dot.x - paperBase.Xmin) * view.width) / ncodeWidth;
-    const y = ((dot.y - paperBase.Ymin) * view.height) / ncodeHeight;
+
+    const widthRatio = view.width / ncodeWidth;
+    const heightRatio = view.height / ncodeHeight;
+    // dot의 기본 margin 값인 Xmin, Ymin 값을 빼주도록 한다.
+    const x = (dot.x - paperBase.Xmin) * widthRatio;
+    const y = (dot.y - paperBase.Ymin) * heightRatio;
+    
+    return { x, y };
+  }
+
+  /**
+   * SmartPlate를 위한 ncode dot 변환 로직
+   * angle 값을 받아 해당 angle에 맞는 dot 좌표를 return 해준다.
+   * 0', 180' -> landscape
+   * 90', 270' -> portrait
+   * 
+   */
+  ncodeToPdf_smartPlate = (dot: Dot, view: View, angle: number) => {
+    const pageInfo = dot.pageInfo;
+
+    let ncodeSize;
+    try {
+      ncodeSize = api.extractMarginInfo(pageInfo);  
+    } catch (e) {
+      console.log(e);
+    }
+
+    let paperBase, ncodeWidth, ncodeHeight;
+    paperBase = { Xmin: ncodeSize.Xmin, Ymin: ncodeSize.Ymin };
+    ncodeWidth = ncodeSize.Xmax - ncodeSize.Xmin;
+    ncodeHeight = ncodeSize.Ymax - ncodeSize.Ymin;
+
+    let plateMode = "landscape";
+    if (angle === 90 || angle === 270){
+      plateMode = "portrait";
+    }
+
+    // plateMode 가 portrait 일때는 ncode의 width <-> height swap
+    if (plateMode === "portrait") {
+      const tmp = ncodeHeight;
+      ncodeHeight = ncodeWidth;
+      ncodeWidth = tmp;
+    }
+
+    let nx = Math.cos(Math.PI/180 * angle) * dot.x - Math.sin(Math.PI/180 * angle) * dot.y;
+    let ny = Math.sin(Math.PI/180 * angle) * dot.x + Math.cos(Math.PI/180 * angle) * dot.y;
+    if (angle === 0) {
+      paperBase.Xmin = 0;
+      paperBase.Ymin = 0;
+    } else if (angle === 90){
+      paperBase.Ymin = 0;
+      nx += ncodeSize.Ymax;
+    } else if (angle === 180) {
+      nx += ncodeSize.Xmax;
+      ny += ncodeSize.Ymax;      
+    } else if (angle === 270) {
+      paperBase.Xmin = 0;
+      ny += ncodeSize.Xmax;
+    }
+
+    const widthRatio = view.width / ncodeWidth;
+    const heightRatio = view.height / ncodeHeight;
+    const x = (nx - paperBase.Xmin) * widthRatio;
+    const y = (ny - paperBase.Ymin) * heightRatio;
+
     return { x, y };
   }
 }
