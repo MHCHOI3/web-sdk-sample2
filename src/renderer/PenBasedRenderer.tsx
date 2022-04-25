@@ -121,11 +121,11 @@ const PenBasedRenderer = () => {
 
     // 먼저, ncode_dot을 view(Canvas) size 에 맞춰 좌표값을 변환시켜준다.
     const view = { width: canvasFb.width, height: canvasFb.height };
-    let pdfDot;
+    let pdfDot: PdfDot;
     if (PenHelper.isSamePage(dot.pageInfo, PlateNcode_3)) {
-      pdfDot = PenHelper.ncodeToPdf_smartPlate(dot, view, angle);
+      pdfDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle);
     } else {
-      pdfDot = PenHelper.ncodeToPdf(dot, view);
+      pdfDot = PenHelper.ncodeToScreen(dot, view);
     }
 
     try {
