@@ -1,6 +1,8 @@
 # web-sdk-sample
 Web sdk sample project using 'NeoSmart Pen'
 
+<br/>
+
 ## Installation 
 ``` sh
 $ git clone https://github.com/MHCHOI3/web-sdk-sample2
@@ -8,8 +10,10 @@ $ cd web-sdk-sample
 $ npm install
 $ npm start
 ```
-## Usage
 
+<br/>
+
+## Usage
 ### Library Set
 ```typescript
 import PenHelper from '../utils/PenHelper';
@@ -36,7 +40,12 @@ useEffect(() => {
 ### Step3: Draw on Canvas with SmartPen
 ```typescript
 // Coordinate Transformation with ncode_dot based on view_size
-const pdfDot = PenHelper.ncodeToPdf(dot, { width: canvasFb.width, height: canvasFb.height });
+// case Default:
+const view = { width: canvasFb.width, height: canvasFb.height };
+const pdfDot = PenHelper.ncodeToPdf(dot, view);
+
+// case SmartPlate:
+const pdfDot = PenHelper.ncodeToPdf_smartPlate(dot, view, angle);
 
 // Create path data using pdfDot
 const path = new Path(pdfDot.x, pdfDot.y);
@@ -70,6 +79,9 @@ if (this.penSettingInfo.HoverMode && !this.state.IsStartWithDown) {
 }
 ```
 
+<br/>
+
+
 ## Debug Settings
 ```typescript
 // webpack.config.js
@@ -85,6 +97,9 @@ devtool: 'cheap-module-source-map',
 // Dev run
 $ npm run dev
 ```
+
+<br/>
+
 
 ## Additional settings (to use PenHelper2.ts)
 ```typescript
