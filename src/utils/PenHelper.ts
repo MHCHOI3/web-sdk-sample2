@@ -237,16 +237,7 @@ class PenHelper {
     return true;
   }
 
-  ncodeToScreen = (dot: Dot, view: View) => {
-    const pageInfo = dot.pageInfo;
-
-    let ncodeSize;
-    try {
-      ncodeSize = api.extractMarginInfo(pageInfo);  
-    } catch (e) {
-      console.log(e);
-    }
-
+  ncodeToScreen = (dot: Dot, view: View, ncodeSize) => {
     /**
      * paperBase: ncode paper의 margin 값
      * ncodeWidth: ncode의 가로길이
@@ -285,16 +276,7 @@ class PenHelper {
    * 90', 270' -> portrait
    * 
    */
-  ncodeToScreen_smartPlate = (dot: Dot, view: View, angle: number) => {
-    const pageInfo = dot.pageInfo;
-
-    let ncodeSize;
-    try {
-      ncodeSize = api.extractMarginInfo(pageInfo);  
-    } catch (e) {
-      console.log(e);
-    }
-
+  ncodeToScreen_smartPlate = (dot: Dot, view: View, angle: number, ncodeSize) => {
     let paperBase, ncodeWidth, ncodeHeight;
     paperBase = { Xmin: ncodeSize.Xmin, Ymin: ncodeSize.Ymin };
     ncodeWidth = ncodeSize.Xmax - ncodeSize.Xmin;
