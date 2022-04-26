@@ -167,6 +167,7 @@ const PenBasedRenderer = () => {
 
   const setCanvasAngle = (rotate: number) => {
     if (![0, 90, 180, 270].includes(rotate)) return
+    if (!pageInfo || !PenHelper.isSamePage(pageInfo, PlateNcode_3)) return
 
     if (Math.abs(angle-rotate)/90 === 1 || Math.abs(angle-rotate)/90 === 3) {
       const tmp = noteWidth;
