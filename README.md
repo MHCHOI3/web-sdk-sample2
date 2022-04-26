@@ -40,12 +40,12 @@ useEffect(() => {
 const view = { width: canvasFb.width, height: canvasFb.height };
 
 // case Default:
-const pdfDot = PenHelper.ncodeToPdf(dot, view);
+const screenDot = PenHelper.ncodeToScreen(dot, view);
 // case SmartPlate:
-const pdfDot = PenHelper.ncodeToPdf_smartPlate(dot, view, angle);
+const screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle); // angle <- [0', 90', 180', 270']
 
-// Create path data using pdfDot
-const path = new Path(pdfDot.x, pdfDot.y);
+// Create path data using screenDot
+const path = new Path(screenDot.x, screenDot.y);
 ```
 
 ### Step4: Hover mode setting
