@@ -1,6 +1,6 @@
 import { makeStyles, TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import PenHelper from '../utils/PenHelper2';
+import PenHelper from '../utils/PenHelper';
 import { fabric } from 'fabric';
 import api from '../server/NoteServer';
 import { Dot, PageInfo, PaperBase, ScreenDot } from '../utils/type';
