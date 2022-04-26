@@ -54,6 +54,8 @@ const PenBasedRenderer = () => {
 
   const [imageBlobUrl, setImageBlobUrl] = useState<any>();
 
+  const [ncodeSize, setNcodeSize] = useState<any>();
+
   // canvas size
   useEffect(() => {
     const { canvas, hoverCanvas } = initCanvas();
@@ -65,7 +67,7 @@ const PenBasedRenderer = () => {
     async function getNoteImageUsingAPI(pageInfo) {
       await api.getNoteImage(pageInfo, setImageBlobUrl);
       const ncodeSize: any = await api.extractMarginInfo(pageInfo);
-      console.log(ncodeSize)
+      setNcodeSize(ncodeSize);
 
       // Ncode Info
       if (ncodeSize !== undefined) {
@@ -157,13 +159,10 @@ const PenBasedRenderer = () => {
     const view = { width: canvasFb.width, height: canvasFb.height };
     let screenDot: ScreenDot;
     if (PenHelper.isSamePage(dot.pageInfo, PlateNcode_3)) {
-      screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle);
+      screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle, ncodeSize);
     } else {
-      screenDot = PenHelper.ncodeToScreen(dot, view);
+      screenDot = PenHelper.ncodeToScreen(dot, view, ncodeSize);
     }
-
-    // ncode dot을 뷰(Canvas)에 보여지게 하기위해 좌표값을 변환시켜 줌.
-    const pdfDot = ncodeToPdf(dot);
 
     try {
       if (dot.dotType === 0) { // Pen Down
