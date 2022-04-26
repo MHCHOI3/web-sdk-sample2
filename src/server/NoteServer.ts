@@ -68,7 +68,7 @@ const extractMarginInfo = async (pageInfo: PageInfo) => {
         const section = doc.children[0].getElementsByTagName('section')[0]?.innerHTML;
         const owner = doc.children[0].getElementsByTagName('owner')[0]?.innerHTML;
         const book = doc.children[0].getElementsByTagName('code')[0]?.innerHTML;
-        const page_item = doc.children[0].getElementsByTagName('page_item')[10];
+        const page_item = doc.children[0].getElementsByTagName('page_item')[page];
         
         console.log(`Target SOBP: ${section}(section) ${owner}(owner) ${book}(book) ${page}(page)`);
 
