@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import PenHelper from '../utils/PenHelper2';
 import { fabric } from 'fabric';
 import api from '../server/NoteServer';
-import { Dot, PageInfo, PdfDot } from '../utils/type';
+import { Dot, PageInfo, ScreenDot } from '../utils/type';
 import { PlateNcode_3 } from '../utils/constants';
 
 const useStyle = makeStyles(() => ({
@@ -121,11 +121,11 @@ const PenBasedRenderer = () => {
 
     // 먼저, ncode_dot을 view(Canvas) size 에 맞춰 좌표값을 변환시켜준다.
     const view = { width: canvasFb.width, height: canvasFb.height };
-    let pdfDot: PdfDot;
+    let screenDot: ScreenDot;
     if (PenHelper.isSamePage(dot.pageInfo, PlateNcode_3)) {
-      pdfDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle);
+      screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle);
     } else {
-      pdfDot = PenHelper.ncodeToScreen(dot, view);
+      screenDot = PenHelper.ncodeToScreen(dot, view);
     }
 
     try {
@@ -140,15 +140,15 @@ const PenBasedRenderer = () => {
           return
         }
         ctx.lineWidth = 2;
-        ctx.lineTo(pdfDot.x, pdfDot.y);
+        ctx.lineTo(screenDot.x, screenDot.y);
         ctx.stroke();
         ctx.closePath();
         ctx.beginPath();
-        ctx.moveTo(pdfDot.x, pdfDot.y);
+        ctx.moveTo(screenDot.x, screenDot.y);
       } else if (dot.dotType === 2) { // Pen Up
         ctx.closePath();
       } else if (dot.dotType === 3) { // Hover 
-        hoverProcess(pdfDot);
+        hoverProcess(screenDot);
       }
     } catch {
       console.log('ctx : ' + ctx);
@@ -177,14 +177,14 @@ const PenBasedRenderer = () => {
   }
 
   // hoverPoint를 이동시키기 위한 로직
-  const hoverProcess = (pdfDot: PdfDot) => {
-    hoverPoint.set({ left: pdfDot.x, top: pdfDot.y, opacity: 0.5 });
+  const hoverProcess = (screenDot: ScreenDot) => {
+    hoverPoint.set({ left: screenDot.x, top: screenDot.y, opacity: 0.5 });
     hoverCanvasFb.requestRenderAll();
   }
 
   const createHoverPoint = () => {
     const hoverPoint = new fabric.Circle({ 
-      radius: 10, 
+      radius: 10,
       fill: '#ff2222',
       stroke: '#ff2222',
       opacity: 0,

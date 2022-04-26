@@ -29,7 +29,7 @@ type Dot = {
   y: number;
 }
 
-type PdfDot = {
+type ScreenDot = {
   x: number;
   y: number;
 }
@@ -48,7 +48,7 @@ export type {
   PageInfo2,
   PaperBase,
   Dot,
-  PdfDot,
+  ScreenDot,
   View,
   Options,
 };
