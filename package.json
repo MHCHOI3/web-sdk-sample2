@@ -5,7 +5,9 @@
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "fabric": "^5.2.1",
-    "pensdk": "^0.0.16",
+    "firebase": "^9.6.11",
+    "jszip": "^3.9.1",
+    "pensdk": "file:../web_sdk_and_neostudio/webPenSDK",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-router-dom": "^6.3.0",

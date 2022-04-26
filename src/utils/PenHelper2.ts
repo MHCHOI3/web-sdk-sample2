@@ -11,7 +11,7 @@ const PEN_CHARACTERISTICS_NOTIFICATION_UUID_128 = '64cd86b1-2256-5aeb-9f04-2caf6
 const PEN_CHARACTERISTICS_WRITE_UUID_128 = '8bc8cc7d-88ca-56b0-af9a-9bf514d0d61a';
 
 class PenHelper {
-  pens: PenController[];
+  pens: any;
   dotCallback: any;
   pageCallback: any;
   messageCallback: any;
@@ -175,7 +175,7 @@ class PenHelper {
 
   characteristicBinding = (read: any, write: any, device: any) => {
     let controller = new PenController();
-    controller.device = device;
+    // controller.device = device;
     // Read Set
     read.startNotifications();
     read.addEventListener('characteristicvaluechanged', event => {
