@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, makeStyles } from '@material-ui/core';
-import PenHelper from '../utils/PenHelper';
+import { PenHelper } from 'web_pen_sdk';
 
 const useStyle = makeStyles((theme) => ({
   caption: {

@@ -1,9 +1,9 @@
 import { makeStyles, TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import PenHelper from '../utils/PenHelper';
+import { PenHelper } from 'web_pen_sdk';
 import { fabric } from 'fabric';
 import api from '../server/NoteServer';
-import { Dot, PageInfo, PaperBase, ScreenDot } from '../utils/type';
+import { Dot, PageInfo, PaperBase, ScreenDot } from 'web_pen_sdk/dist/Util/type';
 import { PlateNcode_3 } from '../utils/constants';
 
 const useStyle = makeStyles(() => ({
@@ -232,25 +232,6 @@ const PenBasedRenderer = () => {
     setHoverPoint(hoverPoint);
     hoverCanvasFb.add(hoverPoint);
   }
-
-  const ncodeToPdf = (dot: Dot) => {
-    /**
-     * paperBase: paper의 margin 값
-     * ncodeWidth: ncode의 가로길이 / ncodeHeight: ncode의 세로길이
-     * dot: ncode의 좌표값
-     * pdfDot: 뷰(Canvas) 사이즈에 맞춰 변환된 dot 좌표값
-     * 
-     * 뷰(Canvas)에 보여질수 있는 좌표값을 구하기 위해 ncode dot 좌표를 계산하는 로직
-     * ncode_size : ncode_dot_position = canvas_size : canvas_dot_position
-     * canvas_dot_position = (ncode_dot_position * canvas_size) / ncode_size
-     * 
-     */
-    const x = ((dot.x - paperBase.Xmin) * canvasFb.width) / ncodeWidth;
-    const y = ((dot.y - paperBase.Ymin) * canvasFb.height) / ncodeHeight;
-    return { x, y }
-  }
-
-  // const blobSupported = new Blob(['ä']).size === 2;  // Boolean
 
   return (
     <div className={classes.mainBackground}>
