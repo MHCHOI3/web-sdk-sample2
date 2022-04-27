@@ -1,10 +1,5 @@
 import { PageInfo } from '../utils/type';
-import digitalNoteNproj from './note_3_27_308/note_308.nproj';
-import digitalNoteImage from '../note_3_27_308/3_27_308_15.jpg';
-import plateNproj from './note_3_1013_2/note_2.nproj';
-import plateImage from './note_3_1013_2/3_1013_2_2.jpg';
-import data from './note_308/note_308.nproj';
-import {initializeApp} from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import JSZip from 'jszip';
 
@@ -26,22 +21,6 @@ const POINT_72DPI_SIZE_IN_INCH = 1 / 72;
 const point72ToNcode = (p: number) => {
   const ratio = NCODE_SIZE_IN_INCH / POINT_72DPI_SIZE_IN_INCH;
   return p / ratio;
-}
-
-/**
- * GET local xml file
- */
-const xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-  if (xhttp.readyState === 4 && xhttp.status === 200) {
-    fetchData(xhttp);
-  }
-};
-xhttp.open('GET', plateNproj, true);
-xhttp.send();
-
-const fetchData = (xmlData) => {
-  return xmlData.responseText;
 }
 
 /**
@@ -138,7 +117,6 @@ const getNoteImage = async (pageInfo: PageInfo, setImageBlobUrl: any) => {
 }
 
 const api = {
-  fetchData,
   extractMarginInfo,
   getNoteImage,
 }
