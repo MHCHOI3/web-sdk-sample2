@@ -7,12 +7,12 @@
     "fabric": "^5.2.1",
     "firebase": "^9.6.11",
     "jszip": "^3.9.1",
-    "pensdk": "file:../web_sdk_and_neostudio/webPenSDK",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.6.3",
+    "web_pen_sdk": "^0.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
