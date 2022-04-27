@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { PenHelper } from 'web_pen_sdk';
 import { fabric } from 'fabric';
 import api from '../server/NoteServer';
-import { Dot, PageInfo, PaperBase, ScreenDot } from 'web_pen_sdk/dist/Util/type';
+import { Dot, PageInfo, ScreenDot } from 'web_pen_sdk/dist/Util/type';
 import { PlateNcode_3 } from '../utils/constants';
 
 const useStyle = makeStyles(() => ({
@@ -44,11 +44,6 @@ const PenBasedRenderer = () => {
   const [noteWidth, setNoteWidth] = useState<number>(0);
   const [noteHeight, setNoteHeight] = useState<number>(0);
 
-  const [ncodeWidth, setNcodeWidth] = useState<number>(0);
-  const [ncodeHeight, setNcodeHeight] = useState<number>(0); 
-
-  const [paperBase, setPaperBase] = useState<PaperBase>({Xmin: 0, Ymin: 0});
-
   const [hoverPoint, setHoverPoint] = useState<any>();
   const [angle, setAngle] = useState<number>(0);
 
@@ -68,19 +63,6 @@ const PenBasedRenderer = () => {
       await api.getNoteImage(pageInfo, setImageBlobUrl);
       const ncodeSize: any = await api.extractMarginInfo(pageInfo);
       setNcodeSize(ncodeSize);
-
-      // Ncode Info
-      if (ncodeSize !== undefined) {
-        setPaperBase({Xmin: ncodeSize.Xmin, Ymin: ncodeSize.Ymin})
-      }
-
-      let ncodeWidth, ncodeHeight;
-      if (ncodeSize) {
-        ncodeWidth = ncodeSize.Xmax - ncodeSize.Xmin;
-        ncodeHeight = ncodeSize.Ymax - ncodeSize.Ymin;
-      }
-      setNcodeWidth(ncodeWidth);
-      setNcodeHeight(ncodeHeight);
     }
 
     if (pageInfo) {
