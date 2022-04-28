@@ -1,17 +1,18 @@
 import { PageInfo } from '../utils/type';
 import { initializeApp } from 'firebase/app';
+
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import JSZip from 'jszip';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAY7MrI37TvkDerHsShcvOsueDpi4TGihw", 
-  authDomain: "neonotes2-d0880.firebaseapp.com",
-  databaseURL: "https://neonotes2-d0880.firebaseio.com",
-  projectId: "neonotes2-d0880",
-  storageBucket: "neonotes2-d0880.appspot.com",
-  messagingSenderId: "693506452621",
-  appId: "1:693506452621:web:8b6600b884b8822d",
-  measurementId: "G-44CKW86QHE"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  databaseURL: process.env.REACT_APP_databaseURL,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
+  measurementId: process.env.REACT_APP_measurementId
 };
 
 // Ncode Formula
@@ -49,6 +50,9 @@ const extractMarginInfo = async (pageInfo: PageInfo) => {
         const book = doc.children[0].getElementsByTagName('code')[0]?.innerHTML;
         const page_item = doc.children[0].getElementsByTagName('page_item')[page];
         
+        if (page_item === undefined) {
+          return;
+        }
         console.log(`Target SOBP: ${section}(section) ${owner}(owner) ${book}(book) ${page}(page)`);
 
         let x1, x2, y1, y2, crop_margin, l, t, r, b;

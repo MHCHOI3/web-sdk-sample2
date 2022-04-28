@@ -1,6 +1,7 @@
 import { makeStyles, TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { PenHelper } from 'web_pen_sdk';
+
 import { fabric } from 'fabric';
 import api from '../server/NoteServer';
 import { Dot, PageInfo, ScreenDot } from 'web_pen_sdk/dist/Util/type';
@@ -32,6 +33,7 @@ const useStyle = makeStyles(() => ({
   },
 }));
 
+// const penHelper = new PenHelper();
 const PenBasedRenderer = () => {
   const classes = useStyle();
 
