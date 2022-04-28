@@ -8,7 +8,7 @@ $ npm install web_pen_sdk
 
 # Sample project setting
 $ git clone https://github.com/MHCHOI3/web-sdk-sample2
-$ cd web-sdk-sample
+$ cd web-sdk-sample2
 $ npm install
 $ npm start
 ```
@@ -40,8 +40,8 @@ useEffect(() => {
 
 ### Step3: Extract from .nproj file to the ncode Note's margin info
 ```typescript
-// ncodeSize type { Xmin, Xmax, Ymin, Ymax }
-const ncodeSize = await api.extractMarginInfo(pageInfo);
+// paperSize type { Xmin, Xmax, Ymin, Ymax }
+const paperSize = await api.extractMarginInfo(pageInfo);
 ```
 
 ### Step4: Draw on Canvas with SmartPen
@@ -50,27 +50,10 @@ const ncodeSize = await api.extractMarginInfo(pageInfo);
 const view = { width: canvasFb.width, height: canvasFb.height };
 
 // case Default:
-const screenDot = PenHelper.ncodeToScreen(dot, view, ncodeSize);
+const screenDot = PenHelper.ncodeToScreen(dot, view, paperSize);
 // case SmartPlate:
-const screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle, ncodeSize) // angle <- [0', 90', 180', 270']
+const screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle, paperSize) // angle <- [0', 90', 180', 270']
 
 // Create path data using screenDot
 const path = new Path(screenDot.x, screenDot.y);
-```
-
-
-## Debug Settings
-```typescript
-// webpack.config.js
-devtool: 'cheap-module-source-map',
-
-// vscode launch.json
-"sourceMap": true,
-"trace": true,
-
-// package.json
-"dev": "webpack-dev-server --host 0.0.0.0 --config ./webpack.config.js",
-
-// Dev run
-$ npm run dev
 ```
