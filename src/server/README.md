@@ -34,8 +34,7 @@ pageInfo를 바탕으로 firebase storage에서 노트의 이미지를 받아오
 // This function is to get the note image from firebase storage based on pageInfo.
 // @param   { PageInfo }
 // @param   { React.dispatch }
-// @returns { boolean }
-//            success -> setImageBlobUrl(imageBlobUrl)
+// @returns { boolean }   success -> setImageBlobUrl(imageBlobUrl)
 const getNoteImage = async (pageInfo: PageInfo, setImageBlobUrl: any) => {
   ...
 }
