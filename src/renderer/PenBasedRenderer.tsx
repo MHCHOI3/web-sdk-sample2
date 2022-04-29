@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { PenHelper, NoteServer } from 'web_pen_sdk';
 
 import { fabric } from 'fabric';
-import { Dot, PageInfo, ScreenDot } from 'web_pen_sdk/dist/Util/type';
+import { Dot, PageInfo, ScreenDot, PaperSize } from 'web_pen_sdk/dist/Util/type';
 import { NULL_PageInfo, PlateNcode_3 } from '../utils/constants';
 
 const useStyle = makeStyles(() => ({
@@ -50,7 +50,7 @@ const PenBasedRenderer = () => {
 
   const [imageBlobUrl, setImageBlobUrl] = useState<any>();
 
-  const [ncodeSize, setNcodeSize] = useState<any>();
+  const [paperSize, setPaperSize] = useState<PaperSize>();
 
   // canvas size
   useEffect(() => {
@@ -62,8 +62,8 @@ const PenBasedRenderer = () => {
   useEffect(() => {
     async function getNoteImageUsingAPI(pageInfo) {
       await NoteServer.getNoteImage(pageInfo, setImageBlobUrl);
-      const ncodeSize: any = await NoteServer.extractMarginInfo(pageInfo);
-      setNcodeSize(ncodeSize);
+      const paperSize: any = await NoteServer.extractMarginInfo(pageInfo);
+      setPaperSize(paperSize);
     }
 
     if (pageInfo) {
@@ -145,13 +145,17 @@ const PenBasedRenderer = () => {
       return;
     }
 
+    if (!paperSize) {
+      return;
+    }
+
     // 먼저, ncode_dot을 view(Canvas) size 에 맞춰 좌표값을 변환시켜준다.
     const view = { width: canvasFb.width, height: canvasFb.height };
     let screenDot: ScreenDot;
     if (PenHelper.isSamePage(dot.pageInfo, PlateNcode_3)) {
-      screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle, ncodeSize);
+      screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle, paperSize);
     } else {
-      screenDot = PenHelper.ncodeToScreen(dot, view, ncodeSize);
+      screenDot = PenHelper.ncodeToScreen(dot, view, paperSize);
     }
 
     try {
