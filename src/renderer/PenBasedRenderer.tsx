@@ -106,12 +106,13 @@ const PenBasedRenderer = () => {
       hoverCanvasFb.setWidth(refactorCanvasWidth);
       
       // NoteImage를 canvas 크기에 맞춰 보여지게 하기위한 scaling 작업
+      // angle 설정, angle에 따른 top/left 이동 설정 
       canvasFb.setBackgroundImage(imageBlobUrl, canvasFb.renderAll.bind(canvasFb), {
         scaleX: canvasFb.width / noteWidth,
         scaleY: canvasFb.height / noteHeight,
         angle: angle,
-        top: 0,
-        left: 0
+        top: [180, 270].includes(angle) ? canvasFb.height : 0,
+        left: [90, 180].includes(angle) ? canvasFb.width : 0,
       });      
     }
   }, [noteWidth, noteHeight, angle]);
