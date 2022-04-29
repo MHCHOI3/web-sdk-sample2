@@ -4,7 +4,7 @@ import { PenHelper, NoteServer } from 'web_pen_sdk';
 
 import { fabric } from 'fabric';
 import { Dot, PageInfo, ScreenDot } from 'web_pen_sdk/dist/Util/type';
-import { PlateNcode_3 } from '../utils/constants';
+import { NULL_PageInfo, PlateNcode_3 } from '../utils/constants';
 
 const useStyle = makeStyles(() => ({
   mainBackground: {
@@ -133,7 +133,11 @@ const PenBasedRenderer = () => {
   }
 
   const strokeProcess = (dot: Dot) => {
-    if (!pageInfo) {
+    /**
+     * SmartPlate에서 hover point가 들어올 때, pageInfo가 { section: -1, owner: -1, book: -1, page: -1 }로 들어옴.
+     * 따라서, 그때는 서버에서 올바른 정보를 가져올 수 없으므로 예외처리 해준다.
+     */ 
+     if (!pageInfo && !PenHelper.isSamePage(dot.pageInfo, NULL_PageInfo)) {
       setPageInfo(dot.pageInfo);
     }
 
