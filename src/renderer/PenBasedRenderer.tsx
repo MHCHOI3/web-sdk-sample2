@@ -32,7 +32,6 @@ const useStyle = makeStyles(() => ({
   },
 }));
 
-// const penHelper = new PenHelper();
 const PenBasedRenderer = () => {
   const classes = useStyle();
 
@@ -52,13 +51,13 @@ const PenBasedRenderer = () => {
 
   const [paperSize, setPaperSize] = useState<PaperSize>();
 
-  // canvas size
   useEffect(() => {
     const { canvas, hoverCanvas } = initCanvas();
     setCanvasFb(canvas);
     setHoverCanvasFb(hoverCanvas);
   }, []);
 
+  // Note Image와 PaperSize를 설정하기 위한 부분
   useEffect(() => {
     async function getNoteImageUsingAPI(pageInfo) {
       await NoteServer.getNoteImage(pageInfo, setImageBlobUrl);
@@ -106,10 +105,11 @@ const PenBasedRenderer = () => {
       hoverCanvasFb.setWidth(refactorCanvasWidth);
       
       // NoteImage를 canvas 크기에 맞춰 보여지게 하기위한 scaling 작업
-      // angle 설정, angle에 따른 top/left 이동 설정 
       canvasFb.setBackgroundImage(imageBlobUrl, canvasFb.renderAll.bind(canvasFb), {
+        // noteImage를 Canvas의 크기에 맞게 resizing
         scaleX: canvasFb.width / noteWidth,
         scaleY: canvasFb.height / noteHeight,
+        // backgroundImage angle 설정에 따른 top, left 값 수정
         angle: angle,
         top: [180, 270].includes(angle) ? canvasFb.height : 0,
         left: [90, 180].includes(angle) ? canvasFb.width : 0,
@@ -117,13 +117,14 @@ const PenBasedRenderer = () => {
     }
   }, [noteWidth, noteHeight, angle]);
  
+  // Ncode Dot을 받아오기 위한 dotCallback 설정
   useEffect(() => {
     PenHelper.dotCallback = async (mac, dot) => {
       strokeProcess(dot);
     }
   });
 
-  // Initialize Canvas
+  // Initialize Canvas, hoverCanvas
   const initCanvas = () => { 
     const canvas = new fabric.Canvas('mainCanvas');
     const hoverCanvas = new fabric.Canvas('hoverCanvas');
@@ -133,10 +134,14 @@ const PenBasedRenderer = () => {
     return { canvas, hoverCanvas }
   }
 
+  /**
+   * Ncode dot을 사용하기 위해 처리하는 로직
+   * @param dot { Dot }
+   */
   const strokeProcess = (dot: Dot) => {
     /**
-     * SmartPlate에서 hover point가 들어올 때, pageInfo가 { section: -1, owner: -1, book: -1, page: -1 }로 들어옴.
-     * 따라서, 그때는 서버에서 올바른 정보를 가져올 수 없으므로 예외처리 해준다.
+     * pageInfo란, Ncode 노트의 정보를 { section, owner, book, page }로 나타내는 값이며 어떤 Note를 사용하는지 파악하기 위해 사용한다
+     * pageInfo 값이 존재하고, NULL_PageInfo({-1, -1, -1, -1})이 아닐 경우에만 pageInfo 상태를 갱신시켜준다.
      */ 
      if (!pageInfo && !PenHelper.isSamePage(dot.pageInfo, NULL_PageInfo)) {
       setPageInfo(dot.pageInfo);
@@ -150,12 +155,12 @@ const PenBasedRenderer = () => {
       return;
     }
 
-    // 먼저, ncode_dot을 view(Canvas) size 에 맞춰 좌표값을 변환시켜준다.
+    // Ncode Dot을 view(Canvas) size 에 맞춰 좌표값을 변환시켜준다.
     const view = { width: canvasFb.width, height: canvasFb.height };
     let screenDot: ScreenDot;
-    if (PenHelper.isSamePage(dot.pageInfo, PlateNcode_3)) {
+    if (PenHelper.isSamePage(dot.pageInfo, PlateNcode_3)) { // Smart Plate
       screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle, paperSize);
-    } else {
+    } else {  // Default
       screenDot = PenHelper.ncodeToScreen(dot, view, paperSize);
     }
 
@@ -185,21 +190,16 @@ const PenBasedRenderer = () => {
       console.log('ctx : ' + ctx);
     }
   }
-  
-  const setCanvasWidth = (width: number) => {
-    canvasFb.setWidth(width);
-    hoverCanvasFb.setWidth(width);
-  }
 
-  const setCanvasHeight = (height: number) => {
-    canvasFb.setHeight(height);
-    hoverCanvasFb.setHeight(height);
-  }
-
+  /**
+   * Canvas의 각도를 설정하는 로직, SmartPlate에서만 동작하도록 완성
+   * @param rotate { number }
+   */
   const setCanvasAngle = (rotate: number) => {
     if (![0, 90, 180, 270].includes(rotate)) return
     if (!pageInfo || !PenHelper.isSamePage(pageInfo, PlateNcode_3)) return
 
+    // 90', 270' 일 경우 note의 width <-> height를 swap 시켜준다. 
     if (Math.abs(angle-rotate)/90 === 1 || Math.abs(angle-rotate)/90 === 3) {
       const tmp = noteWidth;
       setNoteWidth(noteHeight);
@@ -208,7 +208,10 @@ const PenBasedRenderer = () => {
     setAngle(rotate);
   }
 
-  // hoverPoint를 이동시키기 위한 로직
+  /**
+   * Hover Point를 이동시키기 위한 로직
+   * @param screenDot { ScreenDot }
+   */
   const hoverProcess = (screenDot: ScreenDot) => {
     hoverPoint.set({ left: screenDot.x, top: screenDot.y, opacity: 0.5 });
     hoverCanvasFb.requestRenderAll();
@@ -239,17 +242,6 @@ const PenBasedRenderer = () => {
           <TextField id="angle" label="Angle" variant="outlined" type="number" size="small"
               onChange={(e) => setCanvasAngle(parseInt(e.target.value))} />
         </div>
-      {/* <img src={fbImageUrl} className={classes.mainCanvas} alt="" /> */}
-      {/* <div className={classes.inputContainer}>
-        <div className={classes.inputStyle}>
-          <TextField id="width-input" label="Width" variant="outlined" type="number" size="small"
-              onChange={(e) => setCanvasWidth(parseInt(e.target.value))} />
-        </div>
-        <div className={classes.inputStyle}>
-          <TextField id="height-input" label="Height" variant="outlined" type="number" size="small"
-              onChange={(e) => setCanvasHeight(parseInt(e.target.value))} />
-        </div>
-      </div> */}
       </div>
     </div>
   );
