@@ -1,5 +1,5 @@
-# web-sdk-sample
-Web sdk sample project using 'NeoSmart Pen'
+# Neo smartpen SDK Sample Page
+Web sdk sample page using 'NeoSmart Pen'
 
 ## Installation 
 ``` sh
@@ -15,45 +15,30 @@ $ npm start
 
 
 ## Usage
-### Library Set
-```typescript
-import { PenHelper } from 'web_pen_sdk';
-```
 
-### Step1: Connect SmartPen to Web service
+### 1. Pen Connection
+![MainPage](./src/assets/1.png)
 ```typescript
-// Connect pen 
+/** ./src/buttons/ConnectButton.tsx */
 const scanPen = () => {
   PenHelper.scanPen();
-};
+}
 ```
 
-### Step2: Data Parsing from SmartPen
-```typescript
-// Using PenHelper dotCallback function
-useEffect(() => {
-  PenHelper.dotCallback = (mac, dot) => {
-    strokeProcess(dot);
-  }
-});
-```
+### 2. **(Default)** Touch your ncode paper and then use it.
+![DefaultPage](./src/assets/2.png)
 
-### Step3: Extract from .nproj file to the ncode Note's margin info
-```typescript
-// paperSize type { Xmin, Xmax, Ymin, Ymax }
-const paperSize = await api.extractMarginInfo(pageInfo);
-```
 
-### Step4: Draw on Canvas with SmartPen
-```typescript
-// Coordinate Transformation with ncode_dot based on view_size, ncode_size
-const view = { width: canvasFb.width, height: canvasFb.height };
+### 3. **(SmartPlate)**  Change the plate mode to on and set the view size.
+![SmartPlatePage](./src/assets/3.png)
 
-// case Default:
-const screenDot = PenHelper.ncodeToScreen(dot, view, paperSize);
-// case SmartPlate:
-const screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle, paperSize) // angle <- [0', 90', 180', 270']
+#### [Landscape]
+- SmartPlate default setting is landscape 
 
-// Create path data using screenDot
-const path = new Path(screenDot.x, screenDot.y);
-```
+![SmartPlateLandscape](./src/assets/4.png)
+
+#### [portrait]
+- If you want to use it portrait mode -> set angle value
+
+![SmartPlatePortrait](./src/assets/5.png)
+
