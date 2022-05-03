@@ -1,11 +1,8 @@
 # Neo smartpen SDK Sample Page
-Web sdk sample page using 'NeoSmart Pen'
+Web SDK sample page using 'NeoSmart Pen'
 
 ## Installation 
 ``` sh
-# web_pen_sdk setting
-$ npm install web_pen_sdk
-
 # Sample project setting
 $ git clone https://github.com/MHCHOI3/web-sdk-sample2
 $ cd web-sdk-sample2
@@ -14,31 +11,31 @@ $ npm start
 ```
 
 
-## Usage
+## 🔨 Usage
 
 ### 1. Pen Connection
 ![MainPage](./src/assets/1.png)
 ```typescript
-/** ./src/buttons/ConnectButton.tsx */
+// ./src/buttons/ConnectButton.tsx
 const scanPen = () => {
   PenHelper.scanPen();
 }
 ```
 
-### 2. **(Default)** Touch your ncode paper and then use it.
+### 2. **(Paper)** Touch your ncode paper with a smartpen and wait until the note image pops up. Once the image is loaded, write anything.
 ![DefaultPage](./src/assets/2.png)
 
 
-### 3. **(SmartPlate)**  Change the plate mode to on and set the view size.
+### 3. **(SmartPlate)** If you want to write on the smart plate, click the 'PLATE MODE ON' button below. Then set the view size.
 ![SmartPlatePage](./src/assets/3.png)
 
 #### [Landscape]
-- SmartPlate default setting is landscape 
+- The default setting is landscape.
 
 ![SmartPlateLandscape](./src/assets/4.png)
 
-#### [portrait]
-- If you want to use it portrait mode -> set angle value
+#### [Portrait]
+- You can change the page orientation to portrait(vertical) by setting the angle value.
 
 ![SmartPlatePortrait](./src/assets/5.png)
 
