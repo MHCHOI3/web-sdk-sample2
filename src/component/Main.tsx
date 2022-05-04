@@ -21,7 +21,6 @@ const Main = () => {
   
   return (
     <div className={classes.mainBackground}>
-      <Header />
       <PenBasedRenderer />
     </div>
   );
