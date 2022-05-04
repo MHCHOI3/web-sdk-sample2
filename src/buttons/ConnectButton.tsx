@@ -18,16 +18,20 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const ConnectButton = () => {
+const ConnectButton = ({ controller, penInfo }) => {
   const classes = useStyle();
 
   const scanPen = () => {
     PenHelper.scanPen();
   };
 
+  const disconnectPen = () => {
+    PenHelper.disconnect(controller[0]);
+  }
+
   return (
-    <Button onClick={scanPen} className={classes.caption}>
-      connect
+    <Button onClick={penInfo ? disconnectPen : scanPen} className={classes.caption}>
+      {penInfo ? 'disconnect' : 'connect'} 
     </Button>
   );
 };

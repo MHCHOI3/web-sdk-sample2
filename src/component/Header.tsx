@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
-import NavLayer from './NayLayer';
 import LogoTextImage from '../assets/pwa152.png';
+import ConnectButton from '../buttons/ConnectButton';
 
 const useStyle = makeStyles((theme) => ({
   wrap: {
@@ -26,10 +26,15 @@ const useStyle = makeStyles((theme) => ({
     fontWeight: 'bold',
     fontSize: '30px',
     color: 'black',
-  }
+  },
+  navStyle: {
+    height: '50px',
+    backgroundColor: 'rgba(255,255,255,1)',
+    display: 'flex',
+  },
 }));
 
-const Header = () => {
+const Header = ({ controller, penInfo }) => {
   const classes = useStyle();
   return (
     <div className={classes.wrap}>
@@ -37,7 +42,10 @@ const Header = () => {
         <img src={LogoTextImage} className={classes.imgStyle} alt="logo" />
         <Typography className={classes.title}>WEB SDK SAMPLE</Typography>
       </div>
-      <NavLayer />
+      <span>{penInfo ? `Battery: ${penInfo.Battery}` : ''}</span>
+      <div className={classes.navStyle}>
+        <ConnectButton controller={controller} penInfo={penInfo} />
+      </div> 
     </div>
   );
 };

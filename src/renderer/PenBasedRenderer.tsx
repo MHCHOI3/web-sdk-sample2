@@ -5,6 +5,7 @@ import { PenHelper, NoteServer, PenMessageType } from 'web_pen_sdk';
 import { fabric } from 'fabric';
 import { Dot, PageInfo, ScreenDot, PaperSize } from 'web_pen_sdk/dist/Util/type';
 import { NULL_PageInfo, PlateNcode_3 } from '../utils/constants';
+import Header from '../component/Header';
 
 const useStyle = makeStyles(() => ({
   mainBackground: {
@@ -57,8 +58,8 @@ const PenBasedRenderer = () => {
 
   const [plateMode, setPlateMode] = useState<boolean>(false);
 
-  const [penInfo, setPenInfo] = useState();
-  const [controller, setController] = useState();
+  const [penInfo, setPenInfo] = useState<any>();
+  const [controller, setController] = useState<any>();
 
   useEffect(() => {
     const { canvas, hoverCanvas } = createCanvas();
@@ -256,7 +257,7 @@ const PenBasedRenderer = () => {
         break;
       case PenMessageType.PEN_DISCONNECTED:
         console.log('Pen disconnted');
-        PenHelper.disconnect(PenHelper.pens[0]);
+        setPenInfo(null);
         break;
       case PenMessageType.PEN_PASSWORD_REQUEST:
         // 펜 비밀번호 요청 process
@@ -339,6 +340,7 @@ const PenBasedRenderer = () => {
 
   return (
     <>
+      <Header controller={controller} penInfo={penInfo} />
       <div className={classes.mainBackground}>
         <canvas id="mainCanvas" className={classes.mainCanvas} width={window.innerWidth} height={window.innerHeight-163.25}></canvas>
         <div className={classes.hoverCanvasContainer}>
