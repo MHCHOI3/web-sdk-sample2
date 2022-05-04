@@ -1,6 +1,6 @@
 import { Button, makeStyles, TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { PenHelper, NoteServer } from 'web_pen_sdk';
+import { PenHelper, NoteServer, PenMessageType } from 'web_pen_sdk';
 
 import { fabric } from 'fabric';
 import { Dot, PageInfo, ScreenDot, PaperSize } from 'web_pen_sdk/dist/Util/type';
@@ -56,6 +56,9 @@ const PenBasedRenderer = () => {
   const [paperSize, setPaperSize] = useState<PaperSize>();
 
   const [plateMode, setPlateMode] = useState<boolean>(false);
+
+  const [penInfo, setPenInfo] = useState();
+  const [controller, setController] = useState();
 
   useEffect(() => {
     const { canvas, hoverCanvas } = createCanvas();
@@ -153,6 +156,17 @@ const PenBasedRenderer = () => {
     }
   });
 
+  /**
+   * This callback type is called `messageCallback`.
+   * 
+   * @callback messageCallback
+   */
+  useEffect(() => {
+    PenHelper.messageCallback = async (mac, type, args) => {
+      messageProcess(mac, type, args);
+    }
+  });
+  
   /** Create mainCanvas, hoverCanvas */
   const createCanvas = () => { 
     const canvas = new fabric.Canvas('mainCanvas');
@@ -221,6 +235,34 @@ const PenBasedRenderer = () => {
       }
     } catch {
       console.log('ctx : ' + ctx);
+    }
+  }
+
+  /**
+   * Message callback process.
+   * 
+   * @param mac 
+   * @param type 
+   * @param args 
+   */
+  const messageProcess = (mac, type, args) => {
+    console.log(mac, type, args);
+
+    switch (type) {
+      case PenMessageType.PEN_SETTING_INFO:
+        const _controller = PenHelper.pens.filter((c) => c.info.MacAddress === mac);
+        setController(_controller);  // 해당 펜의 controller를 등록해준다.
+        setPenInfo(args);  // 펜의 상태정보를 저장해준다.
+        break;
+      case PenMessageType.PEN_DISCONNECTED:
+        console.log('Pen disconnted');
+        PenHelper.disconnect(PenHelper.pens[0]);
+        break;
+      case PenMessageType.PEN_PASSWORD_REQUEST:
+        // 펜 비밀번호 요청 process
+        break;
+      default:
+        break;
     }
   }
 
