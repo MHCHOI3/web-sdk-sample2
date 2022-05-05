@@ -26,13 +26,16 @@ const ConnectButton = ({ controller, penInfo }) => {
   };
 
   const disconnectPen = () => {
-    PenHelper.disconnect(controller[0]);
+    PenHelper.disconnect(controller);
   }
 
   return (
-    <Button onClick={penInfo ? disconnectPen : scanPen} className={classes.caption}>
-      {penInfo ? 'disconnect' : 'connect'} 
-    </Button>
+    <>
+      {penInfo ?
+        <Button onClick={disconnectPen} className={classes.caption}>disconnect</Button> :
+        <Button onClick={scanPen} className={classes.caption}>connect</Button>
+      }
+    </>
   );
 };
 

@@ -59,6 +59,7 @@ const PenBasedRenderer = () => {
   const [plateMode, setPlateMode] = useState<boolean>(false);
 
   const [penInfo, setPenInfo] = useState<any>();
+  const [tmpPenInfo, setTmpPenInfo] = useState<any>();
   const [controller, setController] = useState<any>();
 
   useEffect(() => {
@@ -240,7 +241,7 @@ const PenBasedRenderer = () => {
   }
 
   /**
-   * Message callback process.
+   * Message callback process. (Pen Event Processing)
    * 
    * @param mac 
    * @param type 
@@ -251,22 +252,47 @@ const PenBasedRenderer = () => {
 
     switch (type) {
       case PenMessageType.PEN_SETTING_INFO:
-        const _controller = PenHelper.pens.filter((c) => c.info.MacAddress === mac);
+        const _controller = PenHelper.pens.filter((c) => c.info.MacAddress === mac)[0];
         setController(_controller);  // 해당 펜의 controller를 등록해준다.
-        setPenInfo(args);  // 펜의 상태정보를 저장해준다.
+        setTmpPenInfo(args);  // 펜의 상태정보를 임시로 저장
         break;
       case PenMessageType.PEN_DISCONNECTED:
         console.log('Pen disconnted');
-        setPenInfo(null);
+        setController(null);  // 펜 연결해제시 펜 controller 초기화.
+        setPenInfo(null);  // 펜 연결해제시 펜 상태정보 초기화.
         break;
       case PenMessageType.PEN_PASSWORD_REQUEST:
-        // 펜 비밀번호 요청 process
+        onPasswordRequired(args);  // 패스워드 요청시 process
+        break;
+      case PenMessageType.PEN_SETUP_SUCCESS	:
+        setPenInfo(tmpPenInfo);  // 펜 연결 성공시 임시로 저장해논 상태정보를 정상적으로 저장
+        setTmpPenInfo(null);  // 임시정보는 null값으로 초기화
         break;
       default:
         break;
     }
   }
 
+    /**
+   * Request Password Process.
+   * 
+   * @param args 
+   */
+     const onPasswordRequired = (args: any) => {
+      const password = prompt(`비밀번호를 입력해주세요. (${args.RetryCount}회 시도)\n비밀번호 10회 오류 시 필기데이터가 초기화 됩니다. `);
+      if (password === null) return;
+      
+      if (password.length !== 4) {
+        alert('패스워드는 4자리 입니다.')
+      }
+      
+      if (args.RetryCount >= 10) {
+        alert('펜의 모든정보가 초기화 됩니다.');
+      }
+  
+      controller.InputPassword(password);
+    }
+  
   /**
    * Set canvas angle.
    * 
