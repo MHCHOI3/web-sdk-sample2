@@ -1,7 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react';
 import PenBasedRenderer from '../renderer/PenBasedRenderer';
-import Header from './Header';
 
 const useStyle = makeStyles((theme) => ({
   mainBackground: {
