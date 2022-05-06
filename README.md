@@ -15,16 +15,18 @@ $ npm start
 
 ### 1. Pen Connection
 ![MainPage](./src/assets/1.png)
-```typescript
-// ./src/buttons/ConnectButton.tsx
-const scanPen = () => {
-  PenHelper.scanPen();
-}
-```
+
+### 1-1. Successful Pen Connection
+![SuccessPenConnection](./src/assets/1-1.png)
+
+### 1-2. Required password if pen has a password set
+![RequiredPassword](./src/assets/1-2.png)
+
+### 1-3. 10 failed attempts at entering the password will reset the Pen
+![ResetPen](./src/assets/1-3.png)
 
 ### 2. **(Paper)** Touch your ncode paper with a smartpen and wait until the note image pops up. Once the image is loaded, write anything.
-![DefaultPage](./src/assets/2.png)
-
+![Paper](./src/assets/2.png)
 
 ### 3. **(SmartPlate)** If you want to write on the smart plate, click the 'PLATE MODE ON' button below. Then set the view size.
 ![SmartPlatePage](./src/assets/3.png)
