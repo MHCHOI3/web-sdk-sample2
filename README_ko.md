@@ -16,7 +16,7 @@ $ npm start
 ### 1. Connect버튼을 눌러 펜 연결을 시도합니다.
 ![MainPage](./src/assets/1.png)
 
-### 1-1. 펜 연결 성공 시 맥/배터리 정보가 표시되며 connect버튼은 disconnect버튼으로 바뀝니다.
+### 1-1. 펜 연결 성공 시 맥/hover모드/배터리 정보가 표시되며 connect버튼은 disconnect버튼으로 바뀝니다.
 ![SuccessPenConnection](./src/assets/1-1.png)
 
 ### 1-2. 펜에 패스워드가 설정되어있다면 패스워드를 입력해주세요.
