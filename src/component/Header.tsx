@@ -32,9 +32,14 @@ const useStyle = makeStyles((theme) => ({
     backgroundColor: 'rgba(255,255,255,1)',
     display: 'flex',
   },
+  penIfno: {
+    display: 'flex',
+    alignItems: 'center',
+    marginRight: '20px',
+  },
 }));
 
-const Header = ({ controller, penInfo }) => {
+const Header = ({ controller, penInfo, battery }) => {
   const classes = useStyle();
   return (
     <div className={classes.wrap}>
@@ -42,8 +47,9 @@ const Header = ({ controller, penInfo }) => {
         <img src={LogoTextImage} className={classes.imgStyle} alt="logo" />
         <Typography className={classes.title}>WEB SDK SAMPLE</Typography>
       </div>
-      <span>{penInfo ? `Battery: ${penInfo.Battery}` : ''}</span>
       <div className={classes.navStyle}>
+        <Typography variant='subtitle2' className={classes.penIfno}>{penInfo ? `Mac: ${penInfo.MacAddress}` : ''}</Typography>
+        <Typography variant='subtitle2' className={classes.penIfno}>{battery ? `Battery: ${battery}` : ''}</Typography>
         <ConnectButton controller={controller} penInfo={penInfo} />
       </div> 
     </div>
