@@ -39,7 +39,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const Header = ({ controller, penInfo, battery }) => {
+const Header = ({ controller, penInfo, penSettingInfo }) => {
   const classes = useStyle();
   return (
     <div className={classes.wrap}>
@@ -49,7 +49,8 @@ const Header = ({ controller, penInfo, battery }) => {
       </div>
       <div className={classes.navStyle}>
         <Typography variant='subtitle2' className={classes.penIfno}>{penInfo ? `Mac: ${penInfo.MacAddress}` : ''}</Typography>
-        <Typography variant='subtitle2' className={classes.penIfno}>{battery ? `Battery: ${battery}` : ''}</Typography>
+        <Typography variant='subtitle2' className={classes.penIfno}>{penInfo && penSettingInfo ? `HoverMode: ${penSettingInfo.HoverMode}` : ''}</Typography>
+        <Typography variant='subtitle2' className={classes.penIfno}>{penInfo && penSettingInfo ? `Battery: ${penSettingInfo.Battery}` : ''}</Typography>
         <ConnectButton controller={controller} penInfo={penInfo} />
       </div> 
     </div>

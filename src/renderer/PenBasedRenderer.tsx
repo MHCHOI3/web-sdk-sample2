@@ -59,7 +59,7 @@ const PenBasedRenderer = () => {
   const [plateMode, setPlateMode] = useState<boolean>(false);
 
   const [penInfo, setPenInfo] = useState<any>();
-  const [battery, setBattery] = useState<any>();
+  const [penSettingInfo, setPenSettingInfo] = useState<any>();
   const [controller, setController] = useState<any>();
 
   useEffect(() => {
@@ -254,13 +254,13 @@ const PenBasedRenderer = () => {
       case PenMessageType.PEN_SETTING_INFO:
         const _controller = PenHelper.pens.filter((c) => c.info.MacAddress === mac)[0];
         setController(_controller);  // 해당 펜의 controller를 등록해준다.
-        setBattery(args.Battery);  // 펜의 배터리 정보 저장
+        setPenSettingInfo(args);  // 펜의 Setting 정보 저장
         break;
       case PenMessageType.PEN_DISCONNECTED:
         console.log('Pen disconnted');
         setController(null);  // 펜 연결해제시 펜 controller 초기화.
         setPenInfo(null);  // 펜 연결해제시 펜 상태정보 초기화.
-        setBattery(null);  // 펜 연결해제시 배터리 정보 초기화
+        setPenSettingInfo(null);  // 펜 연결해제시 Setting 정보 초기화
         break;
       case PenMessageType.PEN_PASSWORD_REQUEST:
         onPasswordRequired(args);  // 패스워드 요청시 process
@@ -368,7 +368,7 @@ const PenBasedRenderer = () => {
 
   return (
     <>
-      <Header controller={controller} penInfo={penInfo} battery={battery} />
+      <Header controller={controller} penInfo={penInfo} penSettingInfo={penSettingInfo} />
       <div className={classes.mainBackground}>
         <canvas id="mainCanvas" className={classes.mainCanvas} width={window.innerWidth} height={window.innerHeight-163.25}></canvas>
         <div className={classes.hoverCanvasContainer}>
