@@ -1,9 +1,9 @@
 import { Button, makeStyles, TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { PenHelper, NoteServer, PenMessageType } from 'web_pen_sdk';
+import { PenHelper, NoteServer, PenMessageType, PenController } from 'web_pen_sdk';
 
 import { fabric } from 'fabric';
-import { Dot, PageInfo, ScreenDot, PaperSize } from 'web_pen_sdk/dist/Util/type';
+import { Dot, PageInfo, ScreenDot, PaperSize, VersionInfo, SettingInfo } from 'web_pen_sdk/dist/Util/type';
 import { NULL_PageInfo, PlateNcode_3 } from '../utils/constants';
 import Header from '../component/Header';
 
@@ -58,9 +58,9 @@ const PenBasedRenderer = () => {
 
   const [plateMode, setPlateMode] = useState<boolean>(false);
 
-  const [penInfo, setPenInfo] = useState<any>();
-  const [penSettingInfo, setPenSettingInfo] = useState<any>();
-  const [controller, setController] = useState<any>();
+  const [penVersionInfo, setPenVersionInfo] = useState<VersionInfo>();
+  const [penSettingInfo, setPenSettingInfo] = useState<SettingInfo>();
+  const [controller, setController] = useState<PenController>();
 
   useEffect(() => {
     const { canvas, hoverCanvas } = createCanvas();
@@ -258,16 +258,16 @@ const PenBasedRenderer = () => {
         break;
       case PenMessageType.PEN_DISCONNECTED:
         console.log('Pen disconnted');
-        setController(null);  // 펜 연결해제시 펜 controller 초기화.
-        setPenInfo(null);  // 펜 연결해제시 펜 상태정보 초기화.
-        setPenSettingInfo(null);  // 펜 연결해제시 Setting 정보 초기화
+        setController(undefined);  // 펜 연결해제시 펜 controller 초기화.
+        setPenVersionInfo(undefined);  // 펜 연결해제시 펜 상태정보 초기화.
+        setPenSettingInfo(undefined);  // 펜 연결해제시 Setting 정보 초기화
         break;
       case PenMessageType.PEN_PASSWORD_REQUEST:
         onPasswordRequired(args);  // 패스워드 요청시 process
         break;
       case PenMessageType.PEN_SETUP_SUCCESS	:
         if (controller) {
-          setPenInfo(controller.info);  // 펜 연결 성공시 연결된 device 펜의 정보 저장
+          setPenVersionInfo(controller.info);  // 펜 연결 성공시 연결된 device 펜의 정보 저장
         }
         break;
       default:
@@ -292,7 +292,7 @@ const PenBasedRenderer = () => {
       alert('펜의 모든정보가 초기화 됩니다.');
     }
 
-    controller.InputPassword(password);
+    controller?.InputPassword(password);
   }
   
   /**
@@ -368,7 +368,7 @@ const PenBasedRenderer = () => {
 
   return (
     <>
-      <Header controller={controller} penInfo={penInfo} penSettingInfo={penSettingInfo} />
+      <Header controller={controller} penVersionInfo={penVersionInfo} penSettingInfo={penSettingInfo} />
       <div className={classes.mainBackground}>
         <canvas id="mainCanvas" className={classes.mainCanvas} width={window.innerWidth} height={window.innerHeight-163.25}></canvas>
         <div className={classes.hoverCanvasContainer}>

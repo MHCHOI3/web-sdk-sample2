@@ -39,7 +39,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const Header = ({ controller, penInfo, penSettingInfo }) => {
+const Header = ({ controller, penVersionInfo, penSettingInfo }) => {
   const classes = useStyle();
   return (
     <div className={classes.wrap}>
@@ -48,10 +48,10 @@ const Header = ({ controller, penInfo, penSettingInfo }) => {
         <Typography className={classes.title}>WEB SDK SAMPLE</Typography>
       </div>
       <div className={classes.navStyle}>
-        <Typography variant='subtitle2' className={classes.penIfno}>{penInfo ? `Mac: ${penInfo.MacAddress}` : ''}</Typography>
-        <Typography variant='subtitle2' className={classes.penIfno}>{penInfo && penSettingInfo ? `HoverMode: ${penSettingInfo.HoverMode}` : ''}</Typography>
-        <Typography variant='subtitle2' className={classes.penIfno}>{penInfo && penSettingInfo ? `Battery: ${penSettingInfo.Battery}` : ''}</Typography>
-        <ConnectButton controller={controller} penInfo={penInfo} />
+        <Typography variant='subtitle2' className={classes.penIfno}>{penVersionInfo ? `Mac: ${penVersionInfo.MacAddress}` : ''}</Typography>
+        <Typography variant='subtitle2' className={classes.penIfno}>{penVersionInfo && penSettingInfo ? `HoverMode: ${penSettingInfo.HoverMode}` : ''}</Typography>
+        <Typography variant='subtitle2' className={classes.penIfno}>{penVersionInfo && penSettingInfo ? `Battery: ${penSettingInfo.Battery}` : ''}</Typography>
+        <ConnectButton controller={controller} penInfo={penVersionInfo} />
       </div> 
     </div>
   );
