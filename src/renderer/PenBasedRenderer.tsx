@@ -62,6 +62,8 @@ const PenBasedRenderer = () => {
   const [penSettingInfo, setPenSettingInfo] = useState<SettingInfo>();
   const [controller, setController] = useState<PenController>();
 
+  const [authorized, setAuthorized] = useState<boolean>(false);
+
   useEffect(() => {
     const { canvas, hoverCanvas } = createCanvas();
     setCanvasFb(canvas);
@@ -255,20 +257,22 @@ const PenBasedRenderer = () => {
         const _controller = PenHelper.pens.filter((c) => c.info.MacAddress === mac)[0];
         setController(_controller);  // 해당 펜의 controller를 등록해준다.
         setPenSettingInfo(args);  // 펜의 Setting 정보 저장
+        setPenVersionInfo(_controller.RequestVersionInfo());  // 펜의 versionInfo 정보 저장
         break;
       case PenMessageType.PEN_DISCONNECTED:
         console.log('Pen disconnted');
         setController(undefined);  // 펜 연결해제시 펜 controller 초기화.
         setPenVersionInfo(undefined);  // 펜 연결해제시 펜 상태정보 초기화.
         setPenSettingInfo(undefined);  // 펜 연결해제시 Setting 정보 초기화
+        setAuthorized(false);  // 연결해제시 인증상태 초기화
         break;
       case PenMessageType.PEN_PASSWORD_REQUEST:
         onPasswordRequired(args);  // 패스워드 요청시 process
         break;
-      case PenMessageType.PEN_SETUP_SUCCESS	:
-        if (controller) {
-          setPenVersionInfo(controller.info);  // 펜 연결 성공시 연결된 device 펜의 정보 저장
-        }
+      case PenMessageType.PEN_AUTHORIZED:
+        setAuthorized(true);  // Pen 인증 성공시 authorized trigger 값 true 변경
+        break;
+      case PenMessageType.PEN_USING_NOTE_SET_RESULT:
         break;
       default:
         break;
@@ -368,7 +372,7 @@ const PenBasedRenderer = () => {
 
   return (
     <>
-      <Header controller={controller} penVersionInfo={penVersionInfo} penSettingInfo={penSettingInfo} />
+      <Header controller={controller} penVersionInfo={penVersionInfo} penSettingInfo={penSettingInfo} authorized={authorized} />
       <div className={classes.mainBackground}>
         <canvas id="mainCanvas" className={classes.mainCanvas} width={window.innerWidth} height={window.innerHeight-163.25}></canvas>
         <div className={classes.hoverCanvasContainer}>
