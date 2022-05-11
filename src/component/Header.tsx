@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 import LogoTextImage from '../assets/pwa152.png';
 import ConnectButton from '../buttons/ConnectButton';
+import PasswordButton from '../buttons/PasswordButton';
 
 const useStyle = makeStyles((theme) => ({
   wrap: {
@@ -51,6 +52,7 @@ const Header = ({ controller, penVersionInfo, penSettingInfo }) => {
         <Typography variant='subtitle2' className={classes.penIfno}>{penVersionInfo ? `Mac: ${penVersionInfo.MacAddress}` : ''}</Typography>
         <Typography variant='subtitle2' className={classes.penIfno}>{penVersionInfo && penSettingInfo ? `HoverMode: ${penSettingInfo.HoverMode}` : ''}</Typography>
         <Typography variant='subtitle2' className={classes.penIfno}>{penVersionInfo && penSettingInfo ? `Battery: ${penSettingInfo.Battery}` : ''}</Typography>
+        <PasswordButton controller={controller} penInfo={penVersionInfo} setInfo={penSettingInfo} />
         <ConnectButton controller={controller} penInfo={penVersionInfo} />
       </div> 
     </div>
