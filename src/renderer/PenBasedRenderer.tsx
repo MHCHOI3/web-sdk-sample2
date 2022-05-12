@@ -58,6 +58,8 @@ const PenBasedRenderer = () => {
 
   const [plateMode, setPlateMode] = useState<boolean>(false);
 
+  const [passwordPen, setPasswordPen] = useState<boolean>(false);
+
   const [penVersionInfo, setPenVersionInfo] = useState<VersionInfo>();
   const [penSettingInfo, setPenSettingInfo] = useState<SettingInfo>();
   const [controller, setController] = useState<PenController>();
@@ -259,6 +261,9 @@ const PenBasedRenderer = () => {
         setPenSettingInfo(args);  // 펜의 Setting 정보 저장
         setPenVersionInfo(_controller.RequestVersionInfo());  // 펜의 versionInfo 정보 저장
         break;
+      case PenMessageType.PEN_SETUP_SUCCESS:
+        controller?.RequestPenStatus();
+        break;
       case PenMessageType.PEN_DISCONNECTED:
         console.log('Pen disconnted');
         setController(undefined);  // 펜 연결해제시 펜 controller 초기화.
@@ -267,12 +272,22 @@ const PenBasedRenderer = () => {
         setAuthorized(false);  // 연결해제시 인증상태 초기화
         break;
       case PenMessageType.PEN_PASSWORD_REQUEST:
+        setPasswordPen(true);
         onPasswordRequired(args);  // 패스워드 요청시 process
+        break;
+      case PenMessageType.PASSWORD_SETUP_SUCCESS:
+        const usingPassword = args.UsingPassword;
+        if(usingPassword){
+          setPasswordPen(true);
+        }else{
+          setPasswordPen(false);
+        }
         break;
       case PenMessageType.PEN_AUTHORIZED:
         setAuthorized(true);  // Pen 인증 성공시 authorized trigger 값 true 변경
         break;
       case PenMessageType.PEN_USING_NOTE_SET_RESULT:
+        controller?.SetHoverEnable(true);
         break;
       default:
         break;
@@ -284,8 +299,8 @@ const PenBasedRenderer = () => {
    * 
    * @param args 
    */
-  const onPasswordRequired = (args: any) => {
-    const password = prompt(`비밀번호를 입력해주세요. (${args.RetryCount}회 시도)\n비밀번호 10회 오류 시 필기데이터가 초기화 됩니다. `);
+  const onPasswordRequired = (args: SettingInfo) => {
+    const password = prompt(`비밀번호를 입력해주세요. (4자리) (${args.RetryCount}회 시도)\n비밀번호 ${args.ResetCount}회 오류 시 필기데이터가 초기화 됩니다. `);
     if (password === null) return;
     
     if (password.length !== 4) {
@@ -372,7 +387,7 @@ const PenBasedRenderer = () => {
 
   return (
     <>
-      <Header controller={controller} penVersionInfo={penVersionInfo} penSettingInfo={penSettingInfo} authorized={authorized} />
+      <Header controller={controller} penVersionInfo={penVersionInfo} penSettingInfo={penSettingInfo} passwordPen={passwordPen} authorized={authorized} />
       <div className={classes.mainBackground}>
         <canvas id="mainCanvas" className={classes.mainCanvas} width={window.innerWidth} height={window.innerHeight-163.25}></canvas>
         <div className={classes.hoverCanvasContainer}>

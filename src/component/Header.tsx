@@ -40,7 +40,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const Header = ({ controller, penVersionInfo, penSettingInfo, authorized }) => {
+const Header = ({ controller, penVersionInfo, penSettingInfo, passwordPen, authorized }) => {
   const classes = useStyle();
   return (
     <div className={classes.wrap}>
@@ -52,7 +52,7 @@ const Header = ({ controller, penVersionInfo, penSettingInfo, authorized }) => {
         <Typography variant='subtitle2' className={classes.penIfno}>{authorized ? `Mac: ${penVersionInfo.MacAddress}` : ''}</Typography>
         <Typography variant='subtitle2' className={classes.penIfno}>{authorized ? `HoverMode: ${penSettingInfo.HoverMode}` : ''}</Typography>
         <Typography variant='subtitle2' className={classes.penIfno}>{authorized ? `Battery: ${penSettingInfo.Battery}` : ''}</Typography>
-        <PasswordButton controller={controller} penInfo={penVersionInfo} setInfo={penSettingInfo} />
+        {authorized ? <PasswordButton controller={controller} passwordPen={passwordPen} /> : ""}
         <ConnectButton controller={controller} penInfo={penVersionInfo} />
       </div> 
     </div>
