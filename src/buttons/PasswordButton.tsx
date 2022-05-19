@@ -26,6 +26,7 @@ const PasswordButton = ({ controller, passwordPen }) => {
 
     if(newPassword === null || newPassword.length !== 4){
       alert("패스워드를 바르게 입력해주세요.")
+      return;
     }
 
     if(newPassword === reNewPassword){
@@ -42,6 +43,7 @@ const PasswordButton = ({ controller, passwordPen }) => {
     if(oldPassword === null || newPassword === null) return
     if(newPassword !== null && newPassword.length !== 4){
         alert("패스워드는 4자리");
+        return;
     }
 
     controller?.SetPassword(oldPassword, newPassword);
@@ -51,6 +53,7 @@ const PasswordButton = ({ controller, passwordPen }) => {
     const oldPassword = prompt("기존 패스워드를 입력하세요. (4자리)");
     if(oldPassword === null || oldPassword.length !== 4){
       alert("패스워드를 바르게 입력해주세요.")
+      return;
     }
     //패스워드를 제거하기 위해서는 newPassword를 빈 문자열(더미 값)로 설정해둬야 한다.
     controller?.SetPassword(oldPassword, "");
