@@ -225,9 +225,6 @@ const PenBasedRenderer = () => {
         hoverPoint.set({ opacity: 0 });  // In case of PenDown, hoverPoint dont need to look
         hoverCanvasFb.requestRenderAll();
       } else if (dot.dotType === 1) {  // Pen Move
-        if (dot.x > 800 || dot.y > 800) {  // Abnormal dot point -> return
-          return
-        }
         ctx.lineWidth = 2;
         ctx.lineTo(screenDot.x, screenDot.y);
         ctx.stroke();

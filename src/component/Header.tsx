@@ -4,6 +4,7 @@ import LogoTextImage from '../assets/pwa152.png';
 import ConnectButton from '../buttons/ConnectButton';
 import PasswordButton from '../buttons/PasswordButton';
 import ProfileButton from '../buttons/ProfileButton';
+import FirmwareButton from '../buttons/FirmwareButton';
 
 const useStyle = makeStyles((theme) => ({
   wrap: {
@@ -53,8 +54,9 @@ const Header = ({ controller, penVersionInfo, penSettingInfo, passwordPen, autho
         <Typography variant='subtitle2' className={classes.penIfno}>{authorized ? `Mac: ${penVersionInfo.MacAddress}` : ''}</Typography>
         <Typography variant='subtitle2' className={classes.penIfno}>{authorized ? `HoverMode: ${penSettingInfo.HoverMode}` : ''}</Typography>
         <Typography variant='subtitle2' className={classes.penIfno}>{authorized ? `Battery: ${penSettingInfo.Battery}` : ''}</Typography>
-        {authorized ? <ProfileButton controller={controller} /> : ""}
-        {/* {authorized ? <PasswordButton controller={controller} passwordPen={passwordPen} /> : ""} */}
+        {authorized ? <FirmwareButton controller={controller} /> : ""}
+        {/* {authorized ? <ProfileButton controller={controller} /> : ""} */}
+        {authorized ? <PasswordButton controller={controller} passwordPen={passwordPen} /> : ""}
         <ConnectButton controller={controller} penInfo={penVersionInfo} />
       </div> 
     </div>

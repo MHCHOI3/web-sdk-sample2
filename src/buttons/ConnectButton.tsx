@@ -29,10 +29,17 @@ const ConnectButton = ({ controller, penInfo }) => {
     PenHelper.disconnect(controller);
   }
 
+  const InitPen = () => {
+    controller.RequestInitPenDisk();
+  }
+
   return (
     <>
       {penInfo ?
-        <Button onClick={disconnectPen} className={classes.caption}>disconnect</Button> :
+        <>
+          <Button onClick={InitPen} className={classes.caption}>InitPEN</Button>
+          <Button onClick={disconnectPen} className={classes.caption}>disconnect</Button>
+        </> :
         <Button onClick={scanPen} className={classes.caption}>connect</Button>
       }
     </>
