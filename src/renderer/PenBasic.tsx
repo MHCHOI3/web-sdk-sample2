@@ -1,11 +1,11 @@
 import { Button, makeStyles, TextField } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
 import { PenHelper, NoteServer, PenMessageType, PenController } from 'web_pen_sdk';
-
+import React, { useEffect, useState } from "react";
 import { fabric } from 'fabric';
 import { Dot, PageInfo, ScreenDot, PaperSize, VersionInfo, SettingInfo } from 'web_pen_sdk/dist/Util/type';
-import { NULL_PageInfo, PlateNcode_3 } from '../utils/constants';
+import { NULL_PageInfo } from '../utils/constants';
 import Header from '../component/Header';
+import { isPlatePaper, isSamePage } from 'web_view_sdk_test/dist/common';
 
 const useStyle = makeStyles(() => ({
   mainBackground: {
@@ -37,7 +37,7 @@ const useStyle = makeStyles(() => ({
   },
 }));
 
-const PenBasedRenderer = () => {
+const PenBasic = () => {
   const classes = useStyle();
 
   const [canvasFb, setCanvasFb] = useState<any>();
@@ -82,7 +82,7 @@ const PenBasedRenderer = () => {
       const paperSize: any = await NoteServer.extractMarginInfo(pageInfo);
       setPaperSize(paperSize);
       
-      if (PenHelper.isSamePage(pageInfo, PlateNcode_3)) {
+      if (isPlatePaper(pageInfo)) {
         // SmartPlate Case, 서버에서 가져온 이미지를 사용하지 않으므로 0으로 설정해주고, canvasFb의 backgroundColor를 white로 만들어준다.
         setImageBlobUrl(0);
         canvasFb.backgroundColor = 'white';
@@ -119,7 +119,7 @@ const PenBasedRenderer = () => {
         return 
       }
 
-      if (pageInfo && PenHelper.isSamePage(pageInfo, PlateNcode_3)) {  // In case of SmartPlate, not required bottom process.
+      if (pageInfo && isPlatePaper(pageInfo)) {  // In case of SmartPlate, not required bottom process.
         return
       }
 
@@ -189,7 +189,7 @@ const PenBasedRenderer = () => {
    * @param {Dot} dot
    */
   const strokeProcess = (dot: Dot) => {
-    if (PenHelper.isSamePage(dot.pageInfo, PlateNcode_3) && !plateMode) {  // SmartPlate를 터치했는데 plateMode가 on으로 설정되지 않으면 사용하지 못하도록 함.
+    if (isPlatePaper(dot.pageInfo) && !plateMode) {  // SmartPlate를 터치했는데 plateMode가 on으로 설정되지 않으면 사용하지 못하도록 함.
       if (dot.dotType === 0) {  // Show alert message only if penDown
         alert('Plate Mode를 on으로 설정한 후, 캔버스를 생성해주세요.');
       }
@@ -197,9 +197,9 @@ const PenBasedRenderer = () => {
     }
 
     /** Update pageInfo either pageInfo !== NULL_PageInfo or pageInfo changed */ 
-    if ((!pageInfo && !PenHelper.isSamePage(dot.pageInfo, NULL_PageInfo)) || 
-        (pageInfo && !PenHelper.isSamePage(pageInfo, dot.pageInfo))) {
-      setPageInfo(dot.pageInfo);
+    if ((!pageInfo && !isSamePage(dot.pageInfo, NULL_PageInfo)) || 
+        (pageInfo && !isSamePage(pageInfo, dot.pageInfo))) {
+        setPageInfo(dot.pageInfo);
     }
 
     if (imageBlobUrl === undefined) {
@@ -213,7 +213,7 @@ const PenBasedRenderer = () => {
     /** Convert SmartPlate ncode dot coordinate values ​​according to the view size */
     const view = { width: canvasFb.width, height: canvasFb.height };
     let screenDot: ScreenDot;
-    if (PenHelper.isSamePage(dot.pageInfo, PlateNcode_3)) {  // Smart Plate
+    if (isPlatePaper(dot.pageInfo)) {  // Smart Plate
       screenDot = PenHelper.ncodeToScreen_smartPlate(dot, view, angle, paperSize);
     } else {  // Default
       screenDot = PenHelper.ncodeToScreen(dot, view, paperSize);
@@ -249,7 +249,7 @@ const PenBasedRenderer = () => {
    * @param args 
    */
   const messageProcess = (mac, type, args) => {
-    console.log(mac, type, args);
+    // console.log(mac, type, args);
 
     switch (type) {
       case PenMessageType.PEN_SETTING_INFO:
@@ -286,6 +286,9 @@ const PenBasedRenderer = () => {
       case PenMessageType.PEN_USING_NOTE_SET_RESULT:
         controller?.SetHoverEnable(true);
         break;
+      case PenMessageType.EVENT_DOT_PUI:
+        console.log(args);
+        break;
       default:
         break;
     }
@@ -318,7 +321,7 @@ const PenBasedRenderer = () => {
    */
   const setCanvasAngle = (rotate: number) => {
     if (![0, 90, 180, 270].includes(rotate)) return
-    if (!pageInfo || !PenHelper.isSamePage(pageInfo, PlateNcode_3)) return
+    if (!pageInfo || !isPlatePaper(pageInfo)) return
 
     if (Math.abs(angle-rotate)/90 === 1 || Math.abs(angle-rotate)/90 === 3) {  // 90', 270' - swap noteWidth <-> noteHeight
       const tmp = noteWidth;
@@ -381,16 +384,18 @@ const PenBasedRenderer = () => {
     setHoverPoint(hoverPoint);
     hoverCanvasFb.add(hoverPoint);
   }
-
+  
   return (
     <>
       <Header controller={controller} penVersionInfo={penVersionInfo} penSettingInfo={penSettingInfo} passwordPen={passwordPen} authorized={authorized} />
-      <div className={classes.mainBackground}>
+      <div id="abc" className={classes.mainBackground}>
         <canvas id="mainCanvas" className={classes.mainCanvas} width={window.innerWidth} height={window.innerHeight-163.25}></canvas>
         <div className={classes.hoverCanvasContainer}>
           <canvas id="hoverCanvas" className={classes.hoverCanvas} width={window.innerWidth} height={window.innerHeight-163.25}></canvas>
         </div>
       </div>
+      <div id = "def"  className={classes.mainBackground}>
+      </div> 
       <div className={classes.inputContainer}>
         <div className={classes.inputStyle}>
           <Button variant="contained" color="primary" size="large" onClick={() => setPlateMode(!plateMode)}>
@@ -420,4 +425,4 @@ const PenBasedRenderer = () => {
   );
 };
 
-export default PenBasedRenderer;
+export default PenBasic;
