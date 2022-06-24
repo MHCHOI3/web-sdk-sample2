@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react';
-import PenBasedRenderer from '../renderer/PenBasedRenderer';
+import ViewBasic from '../renderer/ViewBasic';
 
 const useStyle = makeStyles((theme) => ({
   mainBackground: {
@@ -15,14 +15,14 @@ const useStyle = makeStyles((theme) => ({
   }
 }));
 
-const Main = () => {
+const Render = () => {
   const classes = useStyle();
   
   return (
     <div className={classes.mainBackground}>
-      <PenBasedRenderer />
+      <ViewBasic />
     </div>
   );
 };
 
-export default Main;
+export default Render;
